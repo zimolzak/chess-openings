@@ -63,23 +63,41 @@ d5_qp -- "c4\nQueen's Gambit" [penwidth=13]
 
 /////////////// MODERN KING PAWN ///////////////
 
-e4 -- "Nf6\nAlekhine Def" -- e5_al -- Nd5_al
-e4 -- "d5!?\nScandinavian Def" -- exd5_sd -- Qxd5
 e4 -- "e6\nFrench Def" [penwidth=2.6]
 "e6\nFrench Def" -- d4_fd -- d5_fd
 e4 -- "c6\nCaro-Kann" -- d4_ck -- d5_ck
+e4 -- "d5!?\nScandinavian Def" -- exd5_sd -- Qxd5
+e4 -- "g6\nModern"
+
+// sicilian //
 
 e4 -- "c5\nSicilian Def" [penwidth=8]
-"c5\nSicilian Def" -- d4_si -- cxd4_si -- "c3\nSmith-Morra Gbt"
-"c3\nSmith-Morra Gbt" -- "d5\nSMGD"
-"c3\nSmith-Morra Gbt" -- "dxc3\nSMGA"
-"c5\nSicilian Def" -- "c3\nAlapin Var" -- d5_av
+
 "c5\nSicilian Def" -- Nf3_os [penwidth=14]
 Nf3_os -- "d6\nSchev./Mod. V" [penwidth=8]
 e6_os[label="e6\nOS French V"]
 Nf3_os -- e6_os [penwidth=4]
 Nc6_os[label="Nc6\nOld Sicilian"]
 Nf3_os -- Nc6_os [penwidth=6]
+
+"c5\nSicilian Def" -- "Nc3\nclosed"
+"Nc3\nclosed" -- Nc6_cls
+"Nc3\nclosed" -- d6_cls
+"Nc3\nclosed" -- e6_cls
+
+"c5\nSicilian Def" -- d4_smg -- cxd4_smg
+d4_smg -- e6_smg
+
+"c5\nSicilian Def" -- "c3\nAlapin Var" -- d5_av
+"c3\nAlapin Var" -- Nf6_av
+"c3\nAlapin Var" -- e6_av
+
+// end sici
+
+e4 -- "Nf6\nAlekhine Def" -- e5_al -- Nd5_al
+e4 -- "Nc6\nNimzowitsch"
+e4 -- "d6\nPirc Def" -- d4_pd -- Nf6_pd
+
 
 /////////////// MODERN QUEEN PAWN ///////////////
 
@@ -104,14 +122,7 @@ Start -- "Nf3\nBarcza/Reti" -- d5_b -- g3_b -- "Nf6\nLondon"
 g3_b -- c5_kr
 "Nf3\nBarcza/Reti" -- c5_hh -- g3_hh -- "b6\nHedgehog Def"
 
-/////////////// CHAPTER NINE ///////////////
-
-e4 -- "d6\nPirc Def" -- d4_pd -- Nf6_pd
-
-/////////////////////////// WIKIPEDIA
-
-e4 -- "g6\nModern"
-e4 -- "Nc6\nNimzowitsch"
+//// wikip ////
 
 Nf3_nib[label="Nf3\nZukertort Var"]
 d5_qp -- Nf3_nib [penwidth=5]
