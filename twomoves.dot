@@ -7,14 +7,14 @@ e4 -- e5 [penwidth=5]
 e5 -- Nf3 [penwidth=17]
 
 e5 -- "Bc4\nBishop's"
-"Bc4\nBishop's" -- "Nf6\nBerlin D"
+"Bc4\nBishop's" -- "Nf6\nBerlin"
 "Bc4\nBishop's" -- "Nc6\nbe Ital"
-"Bc4\nBishop's" -- "Bc5\nClassi. D"
+"Bc4\nBishop's" -- "Bc5\nClass D"
 
 
 e5 -- "Nc3\nVienna"
-"Nc3\nVienna" -- "Nf6\nFalkbeer D"
-"Nc3\nVienna" -- "Nc6\nMax Lange D"
+"Nc3\nVienna" -- "Nf6\nFalkb"
+"Nc3\nVienna" -- "Nc6\nMaxLan"
 
 e5 -- "c3\nCenter Pawn"
 
@@ -26,13 +26,13 @@ d4_pn -- "exd4!\nCtr G"
 
 e5 -- "f4\nKing's Gambit" -- "exf4\nKGA"
 "f4\nKing's Gambit" -- "Bc5\nKGcD"
-"f4\nKing's Gambit" -- "d5\nFalkbeer"
+"f4\nKing's Gambit" -- "d5\nFalkb"
 
 Nf3 -- Nc6 [penwidth=17] // main line p. 40
-Nf3 -- "Nf6\nPetroff D"
-Nf3 -- "d6\nPhildor D"
-Nf3 -- "f5\nLatvian Gb"
-Nf3 -- "d5\nElephant Gb"
+Nf3 -- "Nf6\nPetr"
+Nf3 -- "d6\nPhild"
+Nf3 -- "f5\nLatv"
+Nf3 -- "d5\nEleph"
 
 // Ruy and siblings //
 
@@ -52,10 +52,10 @@ d5_qp -- "Bg5\nLevitsky Var"
 d5_qp -- "c4\nQueen's Gambit" [penwidth=13]
 
 "c4\nQueen's Gambit" -- "dxc4\nQGA"
-"c4\nQueen's Gambit" -- "Bf5\nGrau Var"
+"c4\nQueen's Gambit" -- "Bf5\nGrau V"
 "c4\nQueen's Gambit" -- "e6\nQGD"
-"c4\nQueen's Gambit" -- "c6\nSlav Def" [penwidth=9]
-"c4\nQueen's Gambit" -- "Nc6\nChigorin Def"
+"c4\nQueen's Gambit" -- "c6\nSlav D" [penwidth=9]
+"c4\nQueen's Gambit" -- "Nc6\nChig D"
 
 "e6\nQGD" -- Nc3_qp
 "e6\nQGD" -- "g3\nCatalan Var" -- "dxc4\nOpen Catalan"
@@ -68,14 +68,14 @@ e4 -- "e6\nFrench Def" [penwidth=2.6]
 "e6\nFrench Def" -- d3_kia -- "d5\nKIA"
 
 e4 -- "c6\nCaro-Kann" -- d4_ck -- d5_ck
-d4_ck -- "g6\nModern D"
+d4_ck -- "g6\nMod D"
 "c6\nCaro-Kann" -- c4_ck -- "d5\nAnti CK"
-"c6\nCaro-Kann" -- Nf3_ck -- "d5 Fischer-ish"
+"c6\nCaro-Kann" -- Nf3_ck -- "d5\Fisch-ish"
 
 e4 -- "d5!?\nScand. D" -- exd5_sd -- Qxd5
 exd5_sd -- Nf6_sd
 "d5!?\nScand. D" -- d4_sd
-d4_sd -- "dxe4\nBlackmar"
+d4_sd -- "dxe4\nBlackm"
 d4_sd -- "c6\nCaro"
 d4_sd -- "e6\nFrench"
 d4_sd -- "Nc6\nNimz D"
@@ -89,10 +89,10 @@ d4_md -- d6_Pirc
 e4 -- "c5\nSicilian Def" [penwidth=8]
 
 "c5\nSicilian Def" -- Nf3_os [penwidth=14]
-Nf3_os -- "d6\nSchev./Mod. V" [penwidth=8]
-e6_os[label="e6\nOS French V"]
+Nf3_os -- "d6\nSchevMod V" [penwidth=8]
+e6_os[label="e6\nFren V"]
 Nf3_os -- e6_os [penwidth=4]
-Nc6_os[label="Nc6\nOld Sicilian"]
+Nc6_os[label="Nc6\nOld Sic"]
 Nf3_os -- Nc6_os [penwidth=6]
 
 "c5\nSicilian Def" -- "Nc3\nclosed"
@@ -131,16 +131,16 @@ Nf6_mq[label="Nf6\nIndian"]
 d4 -- Nf6_mq [penwidth=10]
 Nf6_mq -- c4_mq
 c4_mq -- g6_mq [penwidth=7]
-c5_mq[label="c5\nHromadka Def"]
+c5_mq[label="c5\nHrom D"]
 c4_mq -- c5_mq[penwidth=2]
-c4_mq -- "e5\nBudapest Gbt"
+c4_mq -- "e5\nBudap Gb"
 
 /////////////// CHAPTER SEVEN ///////////////
 
-Start -- "Nf3\nBarcza/Reti" -- d5_b -- g3_b -- "Nf6\nLondon"
+Start -- "Nf3\nBarcza/Reti" -- d5_b -- g3_b -- "Nf6\nLond"
 "Nf3\nBarcza/Reti" -- Nf6_b -- g3_b2 -- d5_b2
 g3_b -- c5_kr
-"Nf3\nBarcza/Reti" -- c5_hh -- g3_hh -- "b6\nHedgehog Def"
+"Nf3\nBarcza/Reti" -- c5_hh -- g3_hh -- "b6\nHedgeh"
 
 //// wikip ////
 
@@ -153,7 +153,7 @@ Nf6_nib -- "Bg5\nTorre Attack"
 
 d4 -- c5_ob -- "d5\nOld Benoni"
 
-c4_mq -- "d6\nOld Indian Def"
+c4_mq -- "d6\nOID"
 
 ///////////// CHESSTREE
 
