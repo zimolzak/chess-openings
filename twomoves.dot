@@ -89,8 +89,6 @@ Nf3_qp -- ooqp -- Rc1 -- a6
 
 e4 -- "Nf6\nAlekhine Def" -- e5_al -- Nd5_al
 
-Nb6 -- "f4\nFour Pawns"
-
 e4 -- "d5!?\nScandinavian Def" -- exd5_sd -- Qxd5
 
 e4 -- "e6\nFrench Def" [penwidth=2.6]
@@ -107,9 +105,6 @@ e4 -- "c5\nSicilian Def" [penwidth=8]
 
 "c5\nSicilian Def" -- Nf3_os [penwidth=14]
 Nf3_os -- "d6\nScheveningen/Modern Var" [penwidth=8]
-
-Nc3_sv -- "Nc6\nClassical Var" -- Be2
-"Nc6\nClassical Var" -- "Bg5\nRichter-Rauzer Att"
 
 e6_os[label="e6\nFrench Var"]
 Nf3_os -- e6_os [penwidth=4]
