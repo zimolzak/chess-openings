@@ -5,32 +5,39 @@ Start -- e4 [weight=4 penwidth=10]
 e5[label="e5\nOpen"]
 e4 -- e5 [penwidth=5]
 e5 -- Nf3 [penwidth=17]
-e5 -- "Nc3\nVienna"
+
 e5 -- "Bc4\nBishop's"
+"Bc4\nBishop's" -- "Nf6\nBerlin D"
+"Bc4\nBishop's" -- "Nc6\nbe Ital"
+"Bc4\nBishop's" -- "Bc5\nClassi. D"
+
+
+e5 -- "Nc3\nVienna"
+"Nc3\nVienna" -- "Nf6\nFalkbeer D"
+"Nc3\nVienna" -- "Nc6\nMax Lange D"
+
 e5 -- "c3\nCenter Pawn"
 
 d4_pn[label=d4]
 e5 -- d4_pn
 
-d4_pn -- "d6?!"
-d4_pn -- "Bd6?!"
 d4_pn -- "Nc6\nNimzo"
-d4_pn -- "exd4!"
+d4_pn -- "exd4!\nCtr G"
 
 e5 -- "f4\nKing's Gambit" -- "exf4\nKGA"
-
 "f4\nKing's Gambit" -- "Bc5\nKGcD"
 "f4\nKing's Gambit" -- "d5\nFalkbeer"
 
 Nf3 -- Nc6 [penwidth=17] // main line p. 40
+Nf3 -- "Nf6\nPetroff D"
+Nf3 -- "d6\nPhildor D"
+Nf3 -- "f5\nLatvian Gb"
+Nf3 -- "d5\nElephant Gb"
 
-//////// PETROFF ////////
+// Ruy and siblings //
 
-Nf3 -- "Nf6 Petroff"
 Nc6 -- "Bb5\nRuy" [penwidth=8]
-
-//////// SCOTCH ////////
-
+Nc6 -- "Nc3\n3 Knight"
 Nc6 -- "d4\nScotch" [penwidth=3]
 Nc6 -- "Bc4\nItalian" [penwidth=6]
 
@@ -60,21 +67,17 @@ e4 -- "Nf6\nAlekhine Def" -- e5_al -- Nd5_al
 e4 -- "d5!?\nScandinavian Def" -- exd5_sd -- Qxd5
 e4 -- "e6\nFrench Def" [penwidth=2.6]
 "e6\nFrench Def" -- d4_fd -- d5_fd
-
 e4 -- "c6\nCaro-Kann" -- d4_ck -- d5_ck
-e4 -- "c5\nSicilian Def" [penwidth=8]
 
+e4 -- "c5\nSicilian Def" [penwidth=8]
 "c5\nSicilian Def" -- d4_si -- cxd4_si -- "c3\nSmith-Morra Gbt"
 "c3\nSmith-Morra Gbt" -- "d5\nSMGD"
 "c3\nSmith-Morra Gbt" -- "dxc3\nSMGA"
-
 "c5\nSicilian Def" -- "c3\nAlapin Var" -- d5_av
 "c5\nSicilian Def" -- Nf3_os [penwidth=14]
-Nf3_os -- "d6\nScheveningen/Modern Var" [penwidth=8]
-
-e6_os[label="e6\nFrench Var"]
+Nf3_os -- "d6\nSchev./Mod. V" [penwidth=8]
+e6_os[label="e6\nOS French V"]
 Nf3_os -- e6_os [penwidth=4]
-
 Nc6_os[label="Nc6\nOld Sicilian"]
 Nf3_os -- Nc6_os [penwidth=6]
 
