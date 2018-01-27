@@ -1,0 +1,215 @@
+graph {
+
+Start -- e4 [weight=4 penwidth=10]
+
+e5[label="e5\nOpen"]
+e4 -- e5 [penwidth=5]
+e5 -- Nf3 [penwidth=17]
+e5 -- "Nc3\nVienna"
+e5 -- "Bc4\nBishop's"
+e5 -- "c3\nCenter Pawn"
+
+d4_pn[label=d4]
+e5 -- d4_pn
+d4_pn -- "d6?!"
+
+d4_pn -- "Bd6?!"
+
+d4_pn -- "Nc6\nNimzo"
+
+d4_pn -- "exd4!"
+
+
+e5 -- "f4\nKing's Gambit" -- "exf4\nKGA"
+
+"f4\nKing's Gambit" -- "Bc5\nKGcD"
+"f4\nKing's Gambit" -- "d5\nFalkbeer"
+
+Nf3 -- Nc6 [penwidth=17] // main line p. 40
+
+//////// P ////////
+
+Nf3 -- "Nf6 Petroff"
+
+Nc6 -- "Bb5\nRuy" [penwidth=8]
+
+//////// S ////////
+
+Nc6 -- "d4\nScotch" [penwidth=3]
+
+Nc6 -- "Bc4\nItalian" [penwidth=6]
+
+
+
+////////////////////////// CLASSICAL QUEEN PAWN ///////////////
+
+d5_qp[label="d5\nClosed"]
+Start -- d4 [penwidth=6]
+d4 -- d5_qp [penwidth=7 weight=2]
+d5_qp -- "Nc3\nChigorin Var"
+d5_qp -- "Bf4\nMason/Sarratt Var"
+d5_qp -- "Bg5\nLevitsky Var"
+d5_qp -- "c4\nQueen's Gambit" [penwidth=13]
+
+"c4\nQueen's Gambit" -- "dxc4\nQGA"
+"c4\nQueen's Gambit" -- "c6\nSlav Def" [penwidth=9]
+"c4\nQueen's Gambit" -- "e6\nQGD"
+"c4\nQueen's Gambit" -- "Bf5\nGrau Var"
+"c4\nQueen's Gambit" -- "Nc6\nChigorin Def"
+
+"e6\nQGD" -- Nc3_qp
+
+"e6\nQGD" -- "g3\nCatalan Var" -- "dxc4\nOpen Catalan"
+"g3\nCatalan Var" -- "c6\nClosed Catalan" -- Qc2 -- Nf6_cc
+Qc2 -- "f5\nDutch Stonewall"
+
+Nc3_qp -- Nf6_qp
+
+Nc3_qp -- "c5\nTarrasch Def" -- cxd5 -- "cxd4\nSchara-Hennig"
+cxd5 -- exd5_ta
+
+Nf6_qp -- "cxd5\nExchange Var"
+Nf6_qp -- "Nf3\n"
+Nf6_qp -- Bg5_qp
+
+oo_tv[label="O-O"]
+Bg5_qp -- "Be7\nTartakover Var" -- e3_tv -- oo_tv -- Nf3_tv
+Nf3_tv -- "Ne4\nLasker Def"
+Nf3_tv -- "h6\nNeo-Orthodox"
+Nf3_tv -- "b6\nOrthodox"
+
+Bg5_qp -- Nbd7 -- e3 -- h6_qp -- Bh4 -- Be7_qp -- Nf3_qp
+
+Be7_qp -- "cxd5\nQGD, Exchange Var"
+
+ooqp[label="O-O"]
+Nf3_qp -- ooqp -- Rc1 -- a6
+
+/////////////// MODERN KING PAWN ///////////////
+
+e4 -- "Nf6\nAlekhine Def" -- e5_al -- Nd5_al
+
+Nb6 -- "f4\nFour Pawns"
+
+e4 -- "d5!?\nScandinavian Def" -- exd5_sd -- Qxd5
+
+e4 -- "e6\nFrench Def" [penwidth=2.6]
+"e6\nFrench Def" -- d4_fd -- d5_fd
+
+e4 -- "c6\nCaro-Kann" -- d4_ck -- d5_ck
+
+e4 -- "c5\nSicilian Def" [penwidth=8]
+"c5\nSicilian Def" -- d4_si -- cxd4_si -- "c3\nSmith-Morra Gbt"
+"c3\nSmith-Morra Gbt" -- "d5\nSMGD"
+"c3\nSmith-Morra Gbt" -- "dxc3\nSMGA"
+
+"c5\nSicilian Def" -- "c3\nAlapin Var" -- d5_av
+
+"c5\nSicilian Def" -- Nf3_os [penwidth=14]
+Nf3_os -- "d6\nScheveningen/Modern Var" [penwidth=8]
+
+Nc3_sv -- "Nc6\nClassical Var" -- Be2
+"Nc6\nClassical Var" -- "Bg5\nRichter-Rauzer Att"
+
+e6_os[label="e6\nFrench Var"]
+Nf3_os -- e6_os [penwidth=4]
+
+
+Nc6_os[label="Nc6\nOld Sicilian"]
+Nf3_os -- Nc6_os [penwidth=6]
+
+/////////////// MODERN QUEEN PAWN ///////////////
+
+d4 -- "b5\nPolish Def" -- e4_pd -- Bb7_pd -- Bd3_pd -- e6_pd
+
+d4 -- "f5\nDutch Def"
+"f5\nDutch Def" -- "e4\nStaunton Gbt" -- fxe4_sg -- f3_sg
+"f5\nDutch Def" -- Bg5_dd -- h6_dd -- Bh4_dd -- g5_dd
+"f5\nDutch Def" -- "c4\nmain" -- Nf6_dd -- Nc3_dd -- e6_dd
+
+Nf6_mq[label="Nf6\nIndian"]
+d4 -- Nf6_mq [penwidth=10]
+Nf6_mq -- c4_mq
+c4_mq -- "e5\nBudapest Gbt"
+c5_mq[label="c5\nHromadka Def"]
+c4_mq -- c5_mq[penwidth=2]
+c5_mq -- d5_mq -- "b5\nBenko Gbt"
+d5_mq -- "e6\n[Modern] Benoni Def"
+d5_mq -- "e5\nCzech Benoni"
+Bb4_ni[label="Bb4\nNimzo-Indian Def"]
+e6_ni[label="e6\nEast Indian Def"]
+c4_mq -- e6_ni [penwidth=8]
+e6_ni -- Nc3_ni -- Bb4_ni 
+
+Bb4_ni -- "Bg5\nLeningrad Var"
+Bb4_ni -- "a3\nSamisch"
+Bb4_ni -- "Qb3\nSpielmann"
+Bb4_ni -- "Qc2\nClassical"
+Bb4_ni -- "e3\nRubinstein"
+
+e6_ni -- Nf3_ni -- "Bb4+\nBogo-Indian"
+
+Nf3_ni -- "b6\nQueen's Indian Def"
+"b6\nQueen's Indian Def" -- "Nc3\nBotvinnik Var"
+"b6\nQueen's Indian Def" -- "a3\nPetrosian Var"
+"b6\nQueen's Indian Def" -- g3_qi
+
+c4_mq -- g6_mq [penwidth=7]
+g6_mq -- Nc3_mq -- "d5\nGrunfeld Def"
+"d5\nGrunfeld Def" -- "cxd5\nGD Exchange Var"
+"d5\nGrunfeld Def" -- "Nf3\nThree Kts Var"
+"d5\nGrunfeld Def" -- Bf4_gd
+
+/////////////// CHAPTER SEVEN ///////////////
+
+Start -- "Nf3\nBarcza/Reti" -- d5_b -- g3_b -- "Nf6\nLondon" -- "Bg2\nLondon" -- Bf5_l1 -- "O-O_l1" -- e6_l1 -- "d3\nKing's Indian Att"
+
+"Nf3\nBarcza/Reti" -- Nf6_b -- g3_b2 -- d5_b2 -- "Bg2\nLondon" -- Bg4_l2 -- "O-O_l2" -- Bxf3_l2 -- exf3 -- e6_l2 -- f4_l2 -- Be7_l2
+
+g3_b -- c5_kr -- Bg2_kr -- Nc6_kr -- "O-O_kr" -- "e5\nKing's Indian Reversed Def" -- d3_ki -- Nf6_ki -- e4_ki
+
+e4_ki -- dxe4_ki
+e4_ki -- d4_ki
+e4_ki -- Be7_ki
+
+"O-O_kr" -- "e6\nClosed French Def"
+
+"Nf3\nBarcza/Reti" -- c5_hh -- g3_hh -- "b6\nHedgehog Def"
+
+/////////////// CHAPTER EIGHT ///////////////
+
+Bg7_kid[label="Bg7\nKing's Indian Def"]
+Nc3_mq -- Bg7_kid -- e4_kid -- "d6\nKing's Indian Def"
+
+"d6\nKing's Indian Def" -- "f4\nFour Pawns Att"
+"d6\nKing's Indian Def" -- "f3\nSamisch Var" -- e5_sv
+"d6\nKing's Indian Def" -- "Be2\nAverbach Var"
+"d6\nKing's Indian Def" -- "Nf3\nmain"
+
+/////////////// CHAPTER NINE ///////////////
+
+e4 -- "d6\nPirc Def" -- d4_pd -- Nf6_pd
+
+
+/////////////////////////// WIKIPEDIA
+
+e4 -- "g6\nModern"
+e4 -- "Nc6\nNimzowitsch"
+
+Nf3_nib[label="Nf3\nZukertort Var"]
+d5_qp -- Nf3_nib [penwidth=5]
+Nf3_nib -- Nf6_nib
+Nf6_nib -- "e3\nColle System"
+Nf6_nib -- "Bf4\nLondon System"
+Nf6_nib -- "Bg5\nTorre Attack"
+
+d4 -- c5_ob -- "d5\nOld Benoni"
+
+c4_mq -- "d6\nOld Indian Def"
+
+///////////// CHESSTREE
+
+Start -- "c4\nEnglish"
+Start -- "f4\nBird's"
+
+}
