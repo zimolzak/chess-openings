@@ -1,0 +1,495 @@
+graph {
+
+Start -- e4 [weight=4 penwidth=10]
+
+e5[label="e5\nOpen"]
+e4 -- e5 [penwidth=5]
+e5 -- Nf3 [penwidth=17]
+e5 -- "Nc3\nVienna"
+e5 -- "Bc4\nBishop's"
+e5 -- "c3\nCenter Pawn"
+
+d4_pn[label=d4]
+e5 -- d4_pn
+d4_pn -- "d6?!" -- "dxe5!" -- dxe5 -- "Qxd8+" -- Kxd8 -- Bc4
+
+de5 [label="dxe5!"]
+Nf3_36 [label="Nf3"]
+d4_pn -- "Bd6?!" -- de5 -- Bxe5 -- Nf3_36 -- Bf6 -- "e5!" -- Be7 -- "Bc4!"
+
+de5_n [label="dxe5"]
+n3_n [label="Nf3"]
+d4_pn -- "Nc6\nNimzo" -- de5_n -- Nxe5 -- n3_n -- "Nxf3+" -- Qxf3
+
+d4_pn -- "exd4!" -- "c3\nDanish" -- dxc3 -- Nxc3
+
+Nf6_ctr[label=Nf6]
+oo_ctr[label="O-O"]
+"exd4!" -- "Qxd4\nCenter Game" -- "Nc6!" -- Qe3 -- Nf6_ctr -- Nc3 -- Bb4 -- Bd2 -- oo_ctr -- "O-O-O" -- "Re8!"
+
+nkga [label="Nf3"]
+bkga [label="Bc4"]
+qkga [label="Qxf3"]
+e5 -- "f4\nKing's Gambit" -- "exf4\nKGA" -- nkga -- g5 -- bkga -- g4 -- "O-O!?\nMuzio" -- gxf3 -- qkga
+
+"f4\nKing's Gambit" -- "Bc5\nKGcD"
+"f4\nKing's Gambit" -- "d5\nFalkbeer"
+
+Nf3 -- Nc6 [penwidth=17] // main line p. 40
+
+//////// P ////////
+
+d4p[label="d4"]
+nep[label="Nxe5"]
+n3p[label="Nf3"]
+n6p[label="Nf6"]
+be7p[label="Be7"]
+Nf3 -- "Nf6 Petroff" -- d4p
+"Nf6 Petroff" -- nep -- "d6!" -- n3p -- Nxe4 -- Qe2 -- Qe7 -- d3 -- n6p -- Bg5 -- "Qxe2+" -- Bxe2 -- be7p
+
+Nc6 -- "Bb5\nRuy" [penwidth=8]
+
+//////// S ////////
+
+nf6s[label="Nf6"]
+e5s[label="e5"]
+Qe7s[label="Qe7"]
+Qe2s[label="Qe2"]
+Nc6 -- "d4\nScotch" [penwidth=3]
+"d4\nScotch" -- exd4 -- Nxd4 -- nf6s -- Nxc6 -- bxc6 -- e5s -- Qe7s -- Qe2s -- Nd5 -- c4 -- Ba6
+
+Nc6 -- "Bc4\nItalian" [penwidth=6]
+"Bc4\nItalian" -- Bc5
+
+"Bc4\nItalian" -- "Nf6\nTwo Knights" -- Ng5 -- d5 -- exd5
+Ng5 -- "Bc5\nTraxler" -- "Bxf7+" -- Ke7 -- Bd5
+
+Na5_tk[label=Na5]
+exd5 -- Na5_tk
+exd5 -- "b5\nUlvestad"
+Nc3fl[label="Nc3"]
+d4_fl[label="d4!"]
+exd5 -- Nxd5 -- "Nxf7\nFried liver" -- Kxf7 -- "Qxf3+" -- Ke6 -- Nc3fl -- Nce7 -- d4_fl -- "c6!"
+
+foo[label="O-O"]
+Bc5 -- foo
+Bc5 -- "b4!?\nEvans" // p 46
+Bc5 -- "c3\nPiano"
+Bc5 -- "d4!?\nMax Lange"
+
+//////// E ////////
+
+ooe[label="O-O"]
+ooee[label="O-O"]
+d4e[label="d4"]
+exd4e[label="exd4"]
+dxc3e[label="dxc3"]
+e5e[label="e5!"]
+Nxc3e[label="Nxc3"]
+c3_ev[label=c3]
+"b4!?\nEvans" -- Bxb4 -- c3_ev -- Ba5 -- d4e -- exd4e -- ooe -- dxc3e -- "Qb3!" -- Qf6 -- e5e -- Qg6 -- Nxc3e -- Nge7 -- "Ba3!" -- ooee -- Rad1
+
+//////// P ////////
+
+d4pi[label="d4"]
+exd4p[label="exd4"]
+Bd2p[label="Bd2"]
+exd5p[label="exd5"]
+Nxd5p[label="Nxd5"]
+Nce7p[label="Nce7"]
+Nf6p[label="Nf6"]
+"c3\nPiano" -- Nf6p -- d4pi -- exd4p -- cxd4 -- "Bb4+" -- Bd2p -- "Bxd2+" -- Nbxd2 -- "d5!" -- exd5p -- Nxd5p -- Qb3 -- Nce7p
+
+//////// M ////////
+
+exd4m[label="exd4"]
+oom[label="O-O"]
+Nf6m[label="Nf6"]
+e5m[label="e5"]
+d5m[label="d5!"]
+Ng5m[label="Ng5"]
+ooom[label="O-O-O"]
+"d4!?\nMax Lange" -- exd4m -- oom -- Nf6m -- e5m -- d5m -- exf6 -- dxc4 -- "Re1+" -- Be6 -- Ng5m -- "Qd5!" -- "Nc3!" -- Qf5 -- Nce4 -- ooom -- "g4!" -- Qe5 -- fxg7 -- Rhg8 -- Nxe6 -- fxe6 -- Bh6
+
+"Bb5\nRuy" -- "d6\nSteinitz"
+"Bb5\nRuy" -- "Nge7\nCozio"
+"Bb5\nRuy" -- "Nf6\nBerlin"
+"Bb5\nRuy" -- "Nd4(?!)\nBird"
+"Bb5\nRuy" -- "Bc5\nClassical"
+"Bb5\nRuy" -- "f5!?\nSchliemann"
+"Bb5\nRuy" -- "a6!\nMorphy" [penwidth=13]
+
+//////// S ////////
+
+oos[label="O-O"]
+ooss[label="O-O"]
+d4s[label="d4!"]
+Nf6s[label="Nf6"]
+exd4s[label="exd4"]
+Nxd4s[label="Nxd4"]
+Nc3s[label="Nc3"]
+Be7s[label="Be7"]
+Re1_st[label=Re1]
+Bd7_st[label=Bd7]
+"d6\nSteinitz" -- d4s -- exd4s -- Nxd4s -- Bd7_st -- oos -- Nf6s -- Nc3s -- Be7s -- Re1_st -- ooss
+
+//////// C ////////
+
+ooc[label="O-O"]
+Re1c[label="Re1"]
+d4c[label="d4"]
+Bd7c[label=Bd7]
+oocc[label="O-O"]
+nc3c[label="Nc3!"]
+Be7c[label="Be7"]
+Nd5c[label="Nd5"]
+d6_co[label=d6]
+"Nge7\nCozio" -- ooc -- d6_co -- d4c -- Bd7c -- Re1c -- Ng6 -- nc3c -- Be7c -- Nd5c -- oocc
+
+//////// B ////////
+
+oob[label="O-O"]
+oobb[label="O-O"]
+d4b[label="d4!"]
+Nxe4b[label="Nxe4"]
+bxc6b[label="bxc6"]
+dxe5b[label="dxe5"]
+Re1b[label="Re1"]
+Be7b[label="Be7"]
+Nc3b[label="Nc3"]
+Qe2b[label="Qe2"]
+"Nf6\nBerlin" -- oob -- Nxe4b -- d4b -- Nd6 -- Bxc6 -- bxc6b -- dxe5b -- Nb7 -- Re1b -- Be7b -- Nc3b -- oobb -- Qe2b -- Nc5
+
+//////// BI ////////
+
+dxe4_r[label=dxe4]
+oobi[label="O-O"]
+oobbi[label="O-O"]
+exd4_bi[label="exd4"]
+Nf6_bi[label="Nf6"]
+Bg5_bi[label="Bg5"]
+Be7_bi[label="Be7"]
+e5_bi[label="e5"]
+Nd5_bi[label="Nd5"]
+d3_bi[label=d3]
+d5_bi[label=d5]
+Ba4_bi[label=Ba4]
+Bb3_bi[label=Bb3]
+"Nd4(?!)\nBird" -- "Nxd4!" -- exd4_bi -- oobi -- c6 -- Ba4_bi -- Nf6_bi -- d3_bi -- d5_bi -- Bg5_bi -- dxe4 -- dxe4_r -- Be7_bi -- e5_bi -- Nd5_bi -- Bxe7 -- Nxe7 -- Bb3_bi -- oobbi -- Nd2
+
+c3_cl[label="c3"]
+Nf6_cl[label="Nf6"]
+d4_cl[label="d4"]
+exd4_cl[label="exd4"]
+e5_cl[label="e5!"]
+d5_cl[label="d5"]
+nxd_cl[label="Nxd4!"]
+oo_cl[label="O-O"]
+bxc6_cl[label="bxc6"]
+Ng5_cl[label="Ng5"]
+"Bc5\nClassical" -- c3_cl -- Nf6_cl -- d4_cl -- exd4_cl -- e5_cl -- Ne4 -- "O-O!" -- d5_cl -- nxd_cl -- oo_cl -- "Bxc6!" -- bxc6_cl -- "f3!" -- Ng5_cl -- Be3 -- Ne6 -- f4
+
+Nc3_sc[label="Nc3"]
+Nxe4_sc[label="Nxe4"]
+d5_sc[label="d5"]
+Nxe5_sc[label="Nxe5"]
+dxe4_sc[label="dxe4"]
+Nxc6_sc[label="Nxc6"]
+qd5_sc[label="Qd5!"]
+c4_sc[label="c4"]
+c6_sc[label="c6"]
+d4_sc[label="d4"]
+Ba4_sc[label=Ba4]
+"f5!?\nSchliemann" -- Nc3_sc -- fxe4 -- Nxe4_sc -- d5_sc -- Nxe5_sc -- dxe4_sc -- Nxc6_sc -- qd5_sc -- c4_sc -- Qd6 -- "Qh5+" -- g6 -- "Qe5+" -- Qxe5 -- "Nxe5+" -- c6_sc -- Ba4_sc -- Bg7 -- d4_sc -- exd3 -- Bf4
+
+Qf6_ev[label="Qf6"]
+Be3_ev[label="Be3"]
+gxf3_ev[label="gxf3"]
+Qxf3_ev[label="Qxf3"]
+ooev[label="O-O"]
+Qxf3_b[label=Qxf3]
+"a6!\nMorphy" -- "Bxc6\nExchange Var" -- dxc6 -- ooev -- "Bg4!" -- h3 -- "h5!" -- "d3!" -- Qf6_ev -- Be3_ev -- Bxf3 -- Qxf3_ev -- Qxf3_b -- gxf3_ev -- Bd6
+
+d4_ov[label="d4!"]
+Bb3_ov[label="Bb3"]
+d5_ov[label="d5!"]
+dxe5_ov[label=dxe5]
+Be6_ov[label=Be6]
+Nc5_ov[label=Nc5]
+c3_ov[label=c3]
+d4_ov2[label=d4]
+b5_ov[label=b5]
+Nbd2_ov[label=Nbd2]
+"a6!\nMorphy" -- Ba4 [penwidth=17]
+Ba4 -- Nf6 -- "O-O" -- "Nxe4\nOpen Var" -- d4_ov -- b5_ov -- Bb3_ov -- d5_ov -- dxe5_ov -- Be6_ov -- Nbd2_ov -- Nc5_ov -- c3_ov -- d4_ov2 -- "Ng5!"
+
+dxc6_de[label=dxc6]
+Re1_de[label=Re1]
+d4_de[label=d4]
+exd4_de[label=exd4]
+Nxd4_de[label=Nxd4]
+Nc5_de[label=Nc5]
+"O-O" -- "Be7\nClosed Var" -- "Bxc6\nDelayed Exch" -- dxc6_de -- Re1_de -- Nd7 -- d4_de -- exd4_de -- Nxd4_de -- Nc5_de
+
+oo_black[label="O-O"]
+"Be7\nClosed Var" -- Re1 -- b5 -- Bb3 -- oo_black
+
+d3_am[label=d3]
+d6_am[label=d6]
+Nc3_am[label=Nc3]
+Na5_am[label=Na5]
+oo_black -- "a4\nAnti-Marshall" -- Bb7 -- d3_am -- d6_am -- Nc3_am -- b4 -- Ne2 -- Na5_am -- Ba2 -- c5 -- Ng3
+
+nd_tr[label="Nxd4!"]
+nd2_tr[label="Nxd4"]
+exd4_tr[label=exd4]
+e5_tr[label=e5]
+dxc3_tr[label=dxc3]
+Nxc3_tr[label=Nxc3]
+oo_black -- "d4\ntry" -- nd_tr -- nd2_tr -- exd4_tr -- e5_tr -- Ne8 -- "c3!" -- dxc3_tr -- Nxc3_tr
+
+Nxe52_ma[label=Nxe5]
+c6_ma[label="c6!"]
+exd5_ma[label=exd5]
+Nxd5_ma[label=Nxd5]
+Nxe5_ma[label=Nxe5]
+oo_black -- c3 -- "d5\nMarshall Gambit" -- exd5_ma -- Nxd5_ma -- Nxe5_ma -- Nxe52_ma -- Rxe5 -- c6_ma
+
+c3 -- d6 -- "h3!?"
+
+Bb7_70[label=Bb7]
+Be6_70[label=Be6]
+Nd7_70[label=Nd7]
+"h3!?" -- h6
+"h3!?" -- Bb7_70
+"h3!?" -- Be6_70
+"h3!?" -- a5
+"h3!?" -- Re6
+"h3!?" -- Nd7_70
+
+"h3!?" -- Na5 -- Bc2 -- "c5!" -- "d4!" -- Qc7 -- Nbd2 -- Bd7 -- "Nf1\nEnd"
+
+////////////////////////// CLASSICAL QUEEN PAWN ///////////////
+
+d5_qp[label="d5\nClosed"]
+Start -- d4 [penwidth=6]
+d4 -- d5_qp [penwidth=7 weight=2]
+d5_qp -- "Nc3\nChigorin Var"
+d5_qp -- "Bf4\nMason/Sarratt Var"
+d5_qp -- "Bg5\nLevitsky Var"
+d5_qp -- "c4\nQueen's Gambit" [penwidth=13]
+
+"c4\nQueen's Gambit" -- "dxc4\nQGA"
+"c4\nQueen's Gambit" -- "c6\nSlav Def" [penwidth=9]
+"c4\nQueen's Gambit" -- "e6\nQGD"
+"c4\nQueen's Gambit" -- "Bf5\nGrau Var"
+"c4\nQueen's Gambit" -- "Nc6\nChigorin Def"
+
+"e6\nQGD" -- Nc3_qp
+
+"e6\nQGD" -- "g3\nCatalan Var" -- "dxc4\nOpen Catalan"
+"g3\nCatalan Var" -- "c6\nClosed Catalan" -- Qc2 -- Nf6_cc
+Qc2 -- "f5\nDutch Stonewall"
+
+Nc3_qp -- Nf6_qp
+
+Nc3_qp -- "c5\nTarrasch Def" -- cxd5 -- "cxd4\nSchara-Hennig"
+cxd5 -- exd5_ta
+
+Nf6_qp -- "cxd5\nExchange Var"
+Nf6_qp -- "Nf3\n"
+Nf6_qp -- Bg5_qp
+
+oo_tv[label="O-O"]
+Bg5_qp -- "Be7\nTartakover Var" -- e3_tv -- oo_tv -- Nf3_tv
+Nf3_tv -- "Ne4\nLasker Def"
+Nf3_tv -- "h6\nNeo-Orthodox"
+Nf3_tv -- "b6\nOrthodox"
+
+Bg5_qp -- Nbd7 -- e3 -- h6_qp -- Bh4 -- Be7_qp -- Nf3_qp
+
+Be7_qp -- "cxd5\nQGD, Exchange Var"
+
+ooqp[label="O-O"]
+Nf3_qp -- ooqp -- Rc1 -- a6
+
+/////////////// MODERN KING PAWN ///////////////
+
+e4 -- "Nf6\nAlekhine Def" -- e5_al -- Nd5_al -- d4_al -- d6_al -- "c4!" -- Nb6 -- exd6 -- cxd6 -- Nc3_al -- g6_al -- Be3_al -- Bg7_al -- "c5!_al" -- dxc5 -- dxc5_2 -- N6d7 -- Bc4_al
+
+Nb6 -- "f4\nFour Pawns"
+
+e4 -- "d5!?\nScandinavian Def" -- exd5_sd -- Qxd5
+
+e4 -- "e6\nFrench Def" [penwidth=2.6]
+"e6\nFrench Def" -- d4_fd -- d5_fd -- "exd5\nExchange Var"
+d5_fd -- Nc3_fd
+d5_fd -- "Nd2\nTarrasch Var"
+d5_fd -- "e5\nAdvance/Nimzo Var"
+
+e4 -- "c6\nCaro-Kann" -- d4_ck -- d5_ck
+d5_ck -- "Nc3\nClassical Var"
+d5_ck -- "exd5\nC-K Exchange Var"
+d5_ck -- "e5\nAdvance Var"
+
+e4 -- "c5\nSicilian Def" [penwidth=8]
+"c5\nSicilian Def" -- d4_si -- cxd4_si -- "c3\nSmith-Morra Gbt"
+"c3\nSmith-Morra Gbt" -- "d5\nSMGD"
+"c3\nSmith-Morra Gbt" -- "dxc3\nSMGA"
+
+"c5\nSicilian Def" -- "c3\nAlapin Var" -- d5_av
+
+"c5\nSicilian Def" -- Nf3_os [penwidth=14]
+Nf3_os -- "d6\nScheveningen/Modern Var" [penwidth=8]
+"d6\nScheveningen/Modern Var" -- d4_sv -- cxd4_sv -- Nxd4_sv -- Nf6_sv -- Nc3_sv -- e6
+
+e6 -- "Bc4\nFischer Att"
+e6 -- "Bc4\nMaroczy Var"
+e6 -- "Bc4\nKeres Att"
+e6 -- "Bc4\nTal Var"
+Nc3_sv -- "g6\nDragon Var"
+
+Nc3_sv -- "a6\nNajdorf Var"
+"a6\nNajdorf Var" -- Bc4_nv
+"a6\nNajdorf Var" -- Be3_nv
+"a6\nNajdorf Var" -- a4_nv
+"a6\nNajdorf Var" -- f4_nvi
+"a6\nNajdorf Var" -- Bg5_nv -- e6_nv -- f4_nv
+f4_nv -- Nbd7_nv
+f4_nv -- Qc7_nv
+f4_nv -- "Qb6\nPoisoned Pawn Var"
+f4_nv -- "b5\nPolugaevsky Var"
+f4_nv -- "Be7\nNajdorf main"
+
+Nc3_sv -- "Nc6\nClassical Var" -- Be2
+"Nc6\nClassical Var" -- "Bg5\nRichter-Rauzer Att"
+
+e6_os[label="e6\nFrench Var"]
+Nf3_os -- e6_os [penwidth=4]
+e6_os -- d4_os -- cxd4_os -- Nxd4_os
+Nxd4_os -- "a6\nPaulsen Var"
+Nxd4_os -- "Nc6\nSzen Var"
+Nxd4_os -- "Nf6\nPin Var"
+"a6\nPaulsen Var" -- "Nc3\nTaimanov Var"
+"a6\nPaulsen Var" -- "c4\nReti Var"
+"a6\nPaulsen Var" -- "Bd3\nGipslis Var"
+
+Nc6_os[label="Nc6\nOld Sicilian"]
+Nf3_os -- Nc6_os [penwidth=6]
+Nc6_os -- d4_osb -- cxd4_osb -- Nxd4_osb -- "e5\nBourdonnais Var" -- Nb5
+Nb5 -- "a6\nmain"
+Nb5 -- "Nf6\nLasker-Pelikan Var"
+Nb5 -- "d6\nKalashnikov Var"
+
+/////////////// MODERN QUEEN PAWN ///////////////
+
+d4 -- "b5\nPolish Def" -- e4_pd -- Bb7_pd -- Bd3_pd -- e6_pd
+
+d4 -- "f5\nDutch Def"
+"f5\nDutch Def" -- "e4\nStaunton Gbt" -- fxe4_sg -- f3_sg
+"f5\nDutch Def" -- Bg5_dd -- h6_dd -- Bh4_dd -- g5_dd
+"f5\nDutch Def" -- "c4\nmain" -- Nf6_dd -- Nc3_dd -- e6_dd
+
+Nf6_mq[label="Nf6\nIndian"]
+d4 -- Nf6_mq [penwidth=10]
+Nf6_mq -- c4_mq
+c4_mq -- "e5\nBudapest Gbt"
+c5_mq[label="c5\nHromadka Def"]
+c4_mq -- c5_mq[penwidth=2]
+c5_mq -- d5_mq -- "b5\nBenko Gbt"
+d5_mq -- "e6\n[Modern] Benoni Def"
+d5_mq -- "e5\nCzech Benoni"
+Bb4_ni[label="Bb4\nNimzo-Indian Def"]
+e6_ni[label="e6\nEast Indian Def"]
+c4_mq -- e6_ni [penwidth=8]
+e6_ni -- Nc3_ni -- Bb4_ni 
+
+Bb4_ni -- "Bg5\nLeningrad Var"
+Bb4_ni -- "a3\nSamisch"
+Bb4_ni -- "Qb3\nSpielmann"
+Bb4_ni -- "Qc2\nClassical"
+Bb4_ni -- "e3\nRubinstein"
+
+e6_ni -- Nf3_ni -- "Bb4+\nBogo-Indian"
+
+Nf3_ni -- "b6\nQueen's Indian Def"
+"b6\nQueen's Indian Def" -- "Nc3\nBotvinnik Var"
+"b6\nQueen's Indian Def" -- "a3\nPetrosian Var"
+"b6\nQueen's Indian Def" -- g3_qi
+
+c4_mq -- g6_mq [penwidth=7]
+g6_mq -- Nc3_mq -- "d5\nGrunfeld Def"
+"d5\nGrunfeld Def" -- "cxd5\nGD Exchange Var"
+"d5\nGrunfeld Def" -- "Nf3\nThree Kts Var"
+"d5\nGrunfeld Def" -- Bf4_gd
+
+/////////////// CHAPTER SEVEN ///////////////
+
+Start -- "Nf3\nBarcza/Reti" -- d5_b -- g3_b -- "Nf6\nLondon" -- "Bg2\nLondon" -- Bf5_l1 -- "O-O_l1" -- e6_l1 -- "d3\nKing's Indian Att"
+
+"Nf3\nBarcza/Reti" -- Nf6_b -- g3_b2 -- d5_b2 -- "Bg2\nLondon" -- Bg4_l2 -- "O-O_l2" -- Bxf3_l2 -- exf3 -- e6_l2 -- f4_l2 -- Be7_l2
+
+g3_b -- c5_kr -- Bg2_kr -- Nc6_kr -- "O-O_kr" -- "e5\nKing's Indian Reversed Def" -- d3_ki -- Nf6_ki -- e4_ki
+
+e4_ki -- dxe4_ki
+e4_ki -- d4_ki
+e4_ki -- Be7_ki
+
+"O-O_kr" -- "e6\nClosed French Def"
+
+"Nf3\nBarcza/Reti" -- c5_hh -- g3_hh -- "b6\nHedgehog Def"
+
+/////////////// CHAPTER EIGHT ///////////////
+
+Bg7_kid[label="Bg7\nKing's Indian Def"]
+Nc3_mq -- Bg7_kid -- e4_kid -- "d6\nKing's Indian Def"
+
+"d6\nKing's Indian Def" -- "f4\nFour Pawns Att"
+"d6\nKing's Indian Def" -- "f3\nSamisch Var" -- e5_sv
+"d6\nKing's Indian Def" -- "Be2\nAverbach Var"
+"d6\nKing's Indian Def" -- "Nf3\nmain"
+
+/////////////// CHAPTER NINE ///////////////
+
+e4 -- "d6\nPirc Def" -- d4_pd -- Nf6_pd -- Nc3_pd -- "g6\nPirc Def"
+
+Nf6_pd -- f3_pk -- g6_pk -- c4_pk -- Bg7_pk -- Nc3_pk -- e5_sv
+
+"g6\nPirc Def" -- "f4\nAustrian Att" -- Bg7_aa -- Nf3_aa -- "O-O_aa"
+"g6\nPirc Def" -- f3_pd
+"g6\nPirc Def" -- Be3_pd
+"g6\nPirc Def" -- "Bg5\nModern System"
+"g6\nPirc Def" -- Be2_pd
+"g6\nPirc Def" -- "Nf3\nmain/Geller"
+
+"O-O_aa" -- e5_aa
+"O-O_aa" -- Bd3_aa
+"O-O_aa" -- Be3_aa
+
+"Nf3\nmain/Geller" -- Bg7_pm -- Be2_pm -- "O-O_pm" -- "O-O_wpm" -- c6_pm
+c6_pm -- a4_pm
+c6_pm -- h3_pm
+c6_pm -- Re1_pm
+
+/////////////////////////// WIKIPEDIA
+
+e4 -- "g6\nModern"
+e4 -- "Nc6\nNimzowitsch"
+
+Nf3_nib[label="Nf3\nZukertort Var"]
+d5_qp -- Nf3_nib [penwidth=5]
+Nf3_nib -- Nf6_nib
+Nf6_nib -- "e3\nColle System"
+Nf6_nib -- "Bf4\nLondon System"
+Nf6_nib -- "Bg5\nTorre Attack"
+
+d4 -- c5_ob -- "d5\nOld Benoni"
+
+c4_mq -- "d6\nOld Indian Def"
+
+///////////// CHESSTREE
+
+Start -- "c4\nEnglish"
+Start -- "f4\nBird's"
+
+}
