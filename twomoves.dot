@@ -37,9 +37,9 @@ Nf3 -- "d5\nElephant Gb"
 // Ruy and siblings //
 
 Nc6 -- "Bb5\nRuy" [penwidth=8]
-Nc6 -- "Nc3\n3 Knight"
-Nc6 -- "d4\nScotch" [penwidth=3]
 Nc6 -- "Bc4\nItalian" [penwidth=6]
+Nc6 -- "d4\nScotch" [penwidth=3]
+Nc6 -- "Nc3\n3 Knight"
 
 ////////////////////////// CLASSICAL QUEEN PAWN ///////////////
 
@@ -52,9 +52,9 @@ d5_qp -- "Bg5\nLevitsky Var"
 d5_qp -- "c4\nQueen's Gambit" [penwidth=13]
 
 "c4\nQueen's Gambit" -- "dxc4\nQGA"
-"c4\nQueen's Gambit" -- "c6\nSlav Def" [penwidth=9]
-"c4\nQueen's Gambit" -- "e6\nQGD"
 "c4\nQueen's Gambit" -- "Bf5\nGrau Var"
+"c4\nQueen's Gambit" -- "e6\nQGD"
+"c4\nQueen's Gambit" -- "c6\nSlav Def" [penwidth=9]
 "c4\nQueen's Gambit" -- "Nc6\nChigorin Def"
 
 "e6\nQGD" -- Nc3_qp
@@ -65,9 +65,24 @@ d5_qp -- "c4\nQueen's Gambit" [penwidth=13]
 
 e4 -- "e6\nFrench Def" [penwidth=2.6]
 "e6\nFrench Def" -- d4_fd -- d5_fd
+"e6\nFrench Def" -- d3_kia -- "d5\nKIA"
+
 e4 -- "c6\nCaro-Kann" -- d4_ck -- d5_ck
-e4 -- "d5!?\nScandinavian Def" -- exd5_sd -- Qxd5
-e4 -- "g6\nModern"
+d4_ck -- "g6\nModern D"
+"c6\nCaro-Kann" -- c4_ck -- "d5\nAnti CK"
+"c6\nCaro-Kann" -- Nf3_ck -- "d5 Fischer-ish"
+
+e4 -- "d5!?\nScand. D" -- exd5_sd -- Qxd5
+exd5_sd -- Nf6_sd
+"d5!?\nScand. D" -- d4_sd
+d4_sd -- "dxe4\nBlackmar"
+d4_sd -- "c6\nCaro"
+d4_sd -- "e6\nFrench"
+d4_sd -- "Nc6\nNimz D"
+
+e4 -- "g6\nModern" -- d4_md -- Bg7_md
+d4_md -- c6_Caro
+d4_md -- d6_Pirc
 
 // sicilian //
 
@@ -95,7 +110,12 @@ d4_smg -- e6_smg
 // end sici
 
 e4 -- "Nf6\nAlekhine Def" -- e5_al -- Nd5_al
-e4 -- "Nc6\nNimzowitsch"
+"Nf6\nAlekhine Def" -- Nc3_al -- d5_al
+Nc3_al -- d5_Vien
+
+e4 -- "Nc6\nNimzowitsch" -- d4_nz -- d5_nz
+"Nc6\nNimzowitsch" -- Nf3_nz -- e5_Open
+
 e4 -- "d6\nPirc Def" -- d4_pd -- Nf6_pd
 
 
@@ -110,10 +130,10 @@ d4 -- "f5\nDutch Def"
 Nf6_mq[label="Nf6\nIndian"]
 d4 -- Nf6_mq [penwidth=10]
 Nf6_mq -- c4_mq
-c4_mq -- "e5\nBudapest Gbt"
+c4_mq -- g6_mq [penwidth=7]
 c5_mq[label="c5\nHromadka Def"]
 c4_mq -- c5_mq[penwidth=2]
-c4_mq -- g6_mq [penwidth=7]
+c4_mq -- "e5\nBudapest Gbt"
 
 /////////////// CHAPTER SEVEN ///////////////
 
