@@ -1,10 +1,9 @@
-all : out.pdf two.pdf
+allpdfs = openings.pdf twomoves.pdf sparse.pdf
 
-out.pdf : openings.dot
-	dot -Tpdf -o out.pdf openings.dot
+all : $(allpdfs)
 
-two.pdf : twomoves.dot
-	dot -Tpdf -o two.pdf twomoves.dot
+%.pdf : %.dot
+	dot -Tpdf -o $@ $<
 
 clean :
-	rm -f *.pdf
+	rm -f $(allpdfs)
