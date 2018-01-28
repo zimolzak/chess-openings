@@ -133,10 +133,19 @@ e4 -- "d6\nPirc Def" -- d4_pd -- Nf6_pd
 /////////////// MODERN QUEEN PAWN ///////////////
 
 d4 -- "b5\nPolish Def" -- e4_pd -- Bb7_pd
-d4 -- "f5\nDutch Def"
-"f5\nDutch Def" -- "e4\nStauGb" -- fxe4_sg
-"f5\nDutch Def" -- Bg5_dd -- h6_dd
-"f5\nDutch Def" -- "c4\nmain" -- Nf6_dd
+
+// dutch
+
+dutch[label="f5\nDutch Def"]
+d4 -- dutch
+dutch -- g3_dd -- Nf6_dg
+dutch -- Nf3_dd -- Nf6_dn
+Nf3_dd -- "e6\nQpawn"
+dutch -- Nc3_dd
+dutch -- "c4\nmain" -- Nf6_dd
+"c4\nmain" -- "g6\nLeningr"
+dutch -- "e4\nStauGb" -- fxe4_sg
+dutch -- Bg5_dd -- h6_dd
 
 // indian //
 
