@@ -213,9 +213,24 @@ e4_qp -- "e6\nt Fren"
 e4_qp -- "c6\ntC-K"
 e4_qp -- "Nc6\ntNimz"
 
-
 c4_mq -- "d6\nOID"
 
-Start -- "c4\nEnglish"
+//// English ////
+
+eng[label="c4\nEnglish"]
+c5_e[label="c5\nSymm"]
+Start -- eng
+eng -- Nf6_e -- Nc3_ea -- g6_eg
+Nf6_e -- Nf3_el -- g6_em
+eng -- e5_e -- Nc3_eb -- Nf6_eh
+e5_e -- g3_en -- Nf6_eo
+eng -- e6_e -- Nc3_ec -- d5_ei
+e6_e -- Nf3_ep -- d5_eq
+eng -- c5_e -- Nf3_ed -- Nf6_ej
+c5_e -- Nc3_er -- Nc6_es
+eng -- g6_e -- Nc3_ef -- Bg7_ek
+g6_e -- d4_et -- Bg7_eu
+
+
 
 }
