@@ -69,7 +69,7 @@ qg -- "c6\nSlvD" [penwidth=9]
 d5_fd[style=filled, color=black, fontcolor=white]
 
 e4 -- "e6\nFrench Def" [penwidth=2.6]
-"e6\nFrench Def" -- d4_fd -- d5_fd
+"e6\nFrench Def" -- d4_fd -- d5_fd -- d4d5e4e6
 "e6\nFrench Def" -- d3_kia -- "d5\nKIA"
 
 carokann[label="c6\nCaro-Kann", style=filled, color=black, fontcolor=white]
@@ -151,7 +151,9 @@ indian -- nf3qpg
 
 // non indian //
 
-d4 -- e6_m -- e4_ot -- "d5\ntFre"
+d4d5e4e6[shape=rectangle, label="French\nd4d5e4e6"]
+
+d4 -- e6_m -- e4_ot -- "d5\ntFre" -- d4d5e4e6
 e6_m -- c4_ot -- "Nf6\nt NeoI"
 c4_ot -- "f5\nt Dut"
 c4_ot -- "d4\nt QGD"
@@ -194,7 +196,7 @@ c5_hh -- "c4\ntSEng"
 
 //// others ////
 
-d5_qp -- "e4\nt Many"
+d5_qp -- "e4\nt Many" -- e6_tf -- d4d5e4e6
 
 c4_mq -- "d6\nOID"
 
