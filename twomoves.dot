@@ -1,7 +1,8 @@
 graph {
 
-Start -- e4 [weight=4 penwidth=10]
+////////////////////////// CLASSICAL KING PAWN ///////////////
 
+Start -- e4 [weight=4 penwidth=10]
 e5[label="e5\nOpen"]
 e4 -- e5 [penwidth=5]
 e5 -- Nf3 [penwidth=17]
@@ -43,23 +44,33 @@ Nc6 -- "Nc3\n3 Knight"
 
 ////////////////////////// CLASSICAL QUEEN PAWN ///////////////
 
-d5_qp[label="d5\nClosed"]
 Start -- d4 [penwidth=6]
+d5_qp[label="d5\nClosed"]
 d4 -- d5_qp [penwidth=7 weight=2]
-d5_qp -- "Nc3\nChigorin Var"
-d5_qp -- "Bf4\nMason/Sarratt Var"
-d5_qp -- "Bg5\nLevitsky Var"
-d5_qp -- "c4\nQueen's Gambit" [penwidth=13]
+d5_qp -- "Nc3\nChigV"
+d5_qp -- "Bf4\nMa/SaV"
+d5_qp -- "Bg5\nLevitV"
 
-"c4\nQueen's Gambit" -- "dxc4\nQGA"
-"c4\nQueen's Gambit" -- "Bf5\nGrau V"
-"c4\nQueen's Gambit" -- "e6\nQGD"
-"c4\nQueen's Gambit" -- "c6\nSlav D" [penwidth=9]
-"c4\nQueen's Gambit" -- "Nc6\nChig D"
+// zukertort doesn't belong here but render diff.
+Nf3_z[label="Nf3\nZukV"]
+Nf6_z[label="Nf6\nQpG"]
+d5_qp -- Nf3_z [penwidth=5]
+Nf3_z -- Nf6_z
+Nf3_z -- "c6\nQgdSl"
+Nf3_z -- "e6\nqpg"
+Nf3_z -- "c5\nqpg"
 
-"e6\nQGD" -- Nc3_qp
-"e6\nQGD" -- "g3\nCatalan Var" -- "dxc4\nOpen Catalan"
-"g3\nCatalan Var" -- "c6\nClosed Catalan"
+
+// qg
+qg[label="c4\nQG"]
+d5_qp -- qg [penwidth=13]
+qg -- "dxc4\nQGA"
+qg -- "Bf5\nGrauV"
+qg -- "e6\nQGD"
+qg -- "c6\nSlvD" [penwidth=9]
+qg -- "Nc6\nChgD"
+qg -- "Nf6\nMshD"
+
 
 /////////////// MODERN KING PAWN ///////////////
 
@@ -80,32 +91,32 @@ d4_sd -- "c6\nCaro"
 d4_sd -- "e6\nFrench"
 d4_sd -- "Nc6\nNimz D"
 
-e4 -- "g6\nModern" -- d4_md -- Bg7_md
-d4_md -- c6_Caro
-d4_md -- d6_Pirc
+e4 -- "g6\nModern" -- d4_md -- "Bg7\nmd"
+d4_md -- "c6\nCaro 2"
+d4_md -- "d6\nPirc"
 
 // sicilian //
 
 e4 -- "c5\nSicilian Def" [penwidth=8]
 
 "c5\nSicilian Def" -- Nf3_os [penwidth=14]
-Nf3_os -- "d6\nSchevMod V" [penwidth=8]
-e6_os[label="e6\nFren V"]
+Nf3_os -- "d6\nSchev\nModV" [penwidth=8]
+e6_os[label="e6\nFrenV"]
 Nf3_os -- e6_os [penwidth=4]
 Nc6_os[label="Nc6\nOld Sic"]
 Nf3_os -- Nc6_os [penwidth=6]
 
 "c5\nSicilian Def" -- "Nc3\nclosed"
-"Nc3\nclosed" -- Nc6_cls
-"Nc3\nclosed" -- d6_cls
-"Nc3\nclosed" -- e6_cls
+"Nc3\nclosed" -- Nc6_cl
+"Nc3\nclosed" -- d6_cl
+"Nc3\nclosed" -- e6_cl
 
-"c5\nSicilian Def" -- d4_smg -- cxd4_smg
-d4_smg -- e6_smg
+"c5\nSicilian Def" -- d4_sm -- cxd4_sm
+d4_sm -- e6_sm
 
-"c5\nSicilian Def" -- "c3\nAlapin Var" -- d5_av
-"c3\nAlapin Var" -- Nf6_av
-"c3\nAlapin Var" -- e6_av
+"c5\nSicilian Def" -- "c3\nAlapinV" -- d5_av
+"c3\nAlapinV" -- Nf6_av
+"c3\nAlapinV" -- e6_av
 
 // end sici
 
@@ -123,17 +134,39 @@ e4 -- "d6\nPirc Def" -- d4_pd -- Nf6_pd
 
 d4 -- "b5\nPolish Def" -- e4_pd -- Bb7_pd
 d4 -- "f5\nDutch Def"
-"f5\nDutch Def" -- "e4\nStaunton Gbt" -- fxe4_sg
+"f5\nDutch Def" -- "e4\nStauGb" -- fxe4_sg
 "f5\nDutch Def" -- Bg5_dd -- h6_dd
 "f5\nDutch Def" -- "c4\nmain" -- Nf6_dd
+
+// indian //
 
 Nf6_mq[label="Nf6\nIndian"]
 d4 -- Nf6_mq [penwidth=10]
 Nf6_mq -- c4_mq
+// bulk of the indian
+g6_mq[label="g6\nNeoI"]
+c5_mq[label="c5\nHrom D\nBeno.D"]
+c4_mq -- e6_i
 c4_mq -- g6_mq [penwidth=7]
-c5_mq[label="c5\nHrom D"]
 c4_mq -- c5_mq[penwidth=2]
-c4_mq -- "e5\nBudap Gb"
+c4_mq -- d6_i
+c4_mq -- c6_i
+c4_mq -- "e5\nBudG"
+
+// non indian //
+
+d4 -- e6_m -- e4_ot -- "d5\nt Fre"
+e6_m -- c4_ot -- "Nf6\nt NeoI"
+c4_ot -- "f5\nt Dut"
+c4_ot -- "d4\nt QGD"
+e6_m -- c3_ot
+d4 -- d6_m
+d4 -- g6_m -- c4_dg -- "Bg7\nQpMod"
+c4_dg -- "Nf6\nKID"
+g6_m -- e4_m -- "Bg7\nModD"
+e4_m -- "c6\ntC-K 2"
+e4_m -- "d6\nModD"
+g6_m -- Nf3_dg -- Bg7_dg
 
 /////////////// CHAPTER SEVEN ///////////////
 
@@ -142,20 +175,18 @@ Start -- "Nf3\nBarcza/Reti" -- d5_b -- g3_b -- "Nf6\nLond"
 g3_b -- c5_kr
 "Nf3\nBarcza/Reti" -- c5_hh -- g3_hh -- "b6\nHedgeh"
 
-//// wikip ////
+//// others ////
 
-Nf3_nib[label="Nf3\nZukertort Var"]
-d5_qp -- Nf3_nib [penwidth=5]
-Nf3_nib -- Nf6_nib
-Nf6_nib -- "e3\nColle System"
-Nf6_nib -- "Bf4\nLondon System"
-Nf6_nib -- "Bg5\nTorre Attack"
+
+d5_qp -- Bg5_L -- "h6\nLevits"
+d5_qp -- e4_qp -- "dxe4\ntBlkm"
+e4_qp -- "e6\nt Fren"
+e4_qp -- "c6\ntC-K"
+e4_qp -- "Nc6\ntNimz"
 
 d4 -- c5_ob -- "d5\nOld Benoni"
 
 c4_mq -- "d6\nOID"
-
-///////////// CHESSTREE
 
 Start -- "c4\nEnglish"
 
