@@ -186,13 +186,26 @@ d4 -- c5_ob -- "d5\nOld Benoni" -- e5_ob
 
 /////////////// CHAPTER SEVEN ///////////////
 
-Start -- "Nf3\nBarcza/Reti" -- d5_b -- g3_b -- "Nf6\nLond"
-"Nf3\nBarcza/Reti" -- Nf6_b -- g3_b2 -- d5_b2
-g3_b -- c5_kr
-"Nf3\nBarcza/Reti" -- c5_hh -- g3_hh -- "b6\nHedgeh"
+reti[label="Nf3\nBarcza/Reti/\nZuker."]
+Start -- reti 
+reti -- Nf6_b -- g3_b2 -- "d5\nKIA 2"
+g3_b2 -- "g6\nKIA"
+Nf6_b -- "c4\nt Eng"
+Nf6_b -- "d4\nIndD"
+
+reti -- d5_b
+d5_b -- c4_b -- "e6\nt Engl"
+c4_b -- "c6\ntMany"
+c4_b -- "d4\nRetAdv"
+d5_b -- "g3\nKIA" -- "Nf6\nLond"
+"g3\nKIA" -- c5_kr
+d5_b -- "d4\nQG"
+
+reti -- c5_hh -- g3_hh -- "b6\nHedge"
+c5_hh -- "e4\ntSic"
+c5_hh -- "c4\ntSEng"
 
 //// others ////
-
 
 d5_qp -- Bg5_L -- "h6\nLevits"
 d5_qp -- e4_qp -- "dxe4\ntBlkm"
