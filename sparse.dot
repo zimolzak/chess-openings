@@ -36,7 +36,9 @@ Nf3 -- "d5\nElef"
 
 // Ruy and siblings //
 
-Nc6 -- "Bb5\nRuy" [penwidth=8]
+ruy[label="Bb5\nRuy", style=filled, color=black, fontcolor=white]
+
+Nc6 -- ruy [penwidth=8]
 Nc6 -- "Bc4\nItalian" [penwidth=6]
 Nc6 -- "d4\nScotch" [penwidth=3]
 Nc6 -- "Nc3\n3 Knight"
@@ -56,7 +58,7 @@ Nf3_z -- "c6\nQgdSl"
 
 
 // qg
-qg[label="c4\nQG"]
+qg[label="c4\nQG", style=filled, color=black, fontcolor=white]
 d5_qp -- qg [penwidth=13]
 qg -- "dxc4\nQGA"
 qg -- "e6\nQGD"
@@ -65,12 +67,16 @@ qg -- "c6\nSlvD" [penwidth=9]
 
 /////////////// MODERN KING PAWN ///////////////
 
+d5_fd[style=filled, color=black, fontcolor=white]
+
 e4 -- "e6\nFrench Def" [penwidth=2.6]
 "e6\nFrench Def" -- d4_fd -- d5_fd
 "e6\nFrench Def" -- d3_kia -- "d5\nKIA"
 
-e4 -- "c6\nCaro-Kann" -- d4_ck -- d5_ck
-"c6\nCaro-Kann" -- c4_ck -- "d5\nAnti CK"
+carokann[label="c6\nCaro-Kann", style=filled, color=black, fontcolor=white]
+
+e4 -- carokann -- d4_ck -- d5_ck
+carokann -- c4_ck -- "d5\nAnti CK"
 
 e4 -- "d5!?\nScand. D" -- exd5_sd -- Qxd5
 exd5_sd -- Nf6_sd
@@ -82,12 +88,14 @@ e4 -- "g6\nModern" -- d4_md
 
 e4 -- "c5\nSicilian Def" [penwidth=8]
 
+schev[label="d6\nSchev\nModV", style=filled, color=black, fontcolor=white]
+oldsic[label="Nc6\nOld Sic", style=filled, color=black, fontcolor=white]
+frenv[label="e6\nFrenV", style=filled, color=black, fontcolor=white]
+
 "c5\nSicilian Def" -- Nf3_os [penwidth=14]
-Nf3_os -- "d6\nSchev\nModV" [penwidth=8]
-e6_os[label="e6\nFrenV"]
-Nf3_os -- e6_os [penwidth=4]
-Nc6_os[label="Nc6\nOld Sic"]
-Nf3_os -- Nc6_os [penwidth=6]
+Nf3_os -- schev [penwidth=8]
+Nf3_os -- frenv [penwidth=4]
+Nf3_os -- oldsic [penwidth=6]
 
 "c5\nSicilian Def" -- "Nc3\nclosed"
 "Nc3\nclosed" -- Nc6_cl
@@ -129,15 +137,18 @@ dutch -- "e4\nStauGb" -- fxe4_sg
 
 // indian //
 
-Nf6_mq[label="Nf6\nIndian"]
-d4 -- Nf6_mq [penwidth=10]
-Nf6_mq -- c4_mq
+indian[label="Nf6\nIndian"]
+d4 -- indian [penwidth=10]
+indian -- c4_mq
 // bulk of the indian
 g6_mq[label="g6\nNeoI"]
 c5_mq[label="c5\nHrom D\nBeno.D"]
 c4_mq -- g6_mq [penwidth=7]
 c4_mq -- c5_mq[penwidth=2]
 c4_mq -- "e5\nBudG"
+
+nf3qpg[label="Nf3\nIndD/qpg?", style=filled, color=orange, fontcolor=white]
+indian -- nf3qpg
 
 // non indian //
 
@@ -162,12 +173,14 @@ d4 -- c5_ob -- "d5\nOld Benoni" -- e5_ob
 
 /////////////// CHAPTER SEVEN ///////////////
 
-reti[label="Nf3\nBarcza/Reti/\nZuker."]
+reti[label="Nf3\nBarcza/Reti/\nZuker.", style=filled, color=black, fontcolor=white]
 Start -- reti 
 reti -- Nf6_b -- g3_b2 -- "d5\nKIA 2"
 g3_b2 -- "g6\nKIA"
 Nf6_b -- "c4\nt Eng"
-Nf6_b -- "d4\nIndD"
+
+d4indd[label="d4\nIndD/qpg", style=filled, color=orange, fontcolor=white]
+Nf6_b -- d4indd
 
 reti -- d5_b
 d5_b -- c4_b -- "e6\nt Engl"
@@ -189,7 +202,7 @@ c4_mq -- "d6\nOID"
 
 //// English ////
 
-eng[label="c4\nEnglish"]
+eng[label="c4\nEnglish", style=filled, color=black, fontcolor=white]
 c5_e[label="c5\nSymm"]
 Start -- eng
 eng -- Nf6_e -- Nc3_ea -- g6_eg
