@@ -79,7 +79,7 @@ carokann -- c4_ck -- "d5\nAnti CK"
 
 e4 -- "d5!?\nScand. D" -- exd5_sd -- Qxd5
 exd5_sd -- Nf6_sd
-"d5!?\nScand. D" -- "d4\ntransp"
+"d5!?\nScand. D" -- "d4\ntransp" -- e6_sf -- d4d5e4e6
 
 e4 -- "g6\nModern" -- d4_md
 
@@ -156,7 +156,7 @@ d4d5e4e6[shape=rectangle, label="French\nd4d5e4e6"]
 d4 -- e6_m -- e4_ot -- "d5\ntFre" -- d4d5e4e6
 e6_m -- c4_ot -- "Nf6\nt NeoI"
 c4_ot -- "f5\nt Dut"
-c4_ot -- "d4\nt QGD"
+c4_ot -- "d5\nt QGD"
 e6_m -- c3_ot
 d4 -- g6_m -- c4_dg -- "Bg7\nQpMod"
 
