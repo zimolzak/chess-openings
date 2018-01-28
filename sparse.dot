@@ -99,6 +99,7 @@ frenv[label="e6\nFrenV", style=filled, color=black, fontcolor=white]
 Nf3_os -- schev [penwidth=8]
 Nf3_os -- frenv [penwidth=4]
 Nf3_os -- oldsic [penwidth=6]
+Nf3_os -- os
 
 "c5\nSicilian Def" -- "Nc3\nclosed"
 "Nc3\nclosed" -- Nc6_cl
@@ -190,7 +191,7 @@ d4 -- c5_ob -- "d5\nOld Benoni"
 reti[label="Nf3\nBarcza/Reti/\nZuker.", style=filled, color=red, fontcolor=white]
 reti -- Nf6_b -- g3_b2 -- "d5\nKIA 2"
 g3_b2 -- "g6\nKIA"
-Nf6_b -- "c4\nt Eng"
+Nf6_b -- "c4\nt Eng" -- g6_eg
 
 d4indd[label="d4\nIndD/qpg", style=filled, color=black, fontcolor=white]
 Nf6_b -- d4indd -- d4nf6nf3
@@ -204,8 +205,9 @@ d5_b -- "g3\nKIA" -- "Nf6\nLond"
 d5_b -- "d4\nQG"
 
 reti -- c5_hh -- g3_hh -- "b6\nHedge"
-c5_hh -- "e4\ntSic"
-c5_hh -- "c4\ntSEng"
+c5_hh -- "e4\ntSic" -- os
+os[shape=rectangle]
+c5_hh -- "c4\ntSEng" -- Nf6_ej
 
 //// others ////
 
