@@ -2,7 +2,7 @@ graph {
 
 ////////////////////////// CLASSICAL KING PAWN ///////////////
 
-
+e4[style=filled, color=red]
 e5[label="e5\nOpen"]
 e4 -- e5 [penwidth=5]
 e5 -- Nf3 [penwidth=17]
@@ -46,6 +46,7 @@ Nc6 -- "Nc3\n3 Knight"
 
 ////////////////////////// CLASSICAL QUEEN PAWN ///////////////
 
+d4[style=filled, color=red]
 d5_qp[label="d5\nClosed"]
 d4 -- d5_qp [penwidth=7 weight=2]
 
@@ -64,6 +65,7 @@ d5_qp -- qg [penwidth=13]
 qg -- "dxc4\nQGA"
 qg -- "e6\nQGD" -- c4d5d4e6
 qg -- "c6\nSlvD" [penwidth=9]
+"c6\nSlvD" -- c4c6d4d5
 
 
 /////////////// MODERN KING PAWN ///////////////
@@ -151,6 +153,7 @@ c5_mq[label="c5\nHrom D\nBeno.D"]
 c4_mq -- g6_mq [penwidth=7]
 c4_mq -- c5_mq[penwidth=2]
 c4_mq -- "e5\nBudG"
+c4_mq -- c6_si -- c4c6d4nf6
 
 nf3qpg[label="Nf3\nIndD/qpg?", style=filled, color=black, fontcolor=white]
 d4nf6nf3[shape=rectangle, label="Ind D\nd4nf6nf3"]
@@ -165,6 +168,8 @@ d4 -- e6_m -- e4_ot -- "d5\ntFre" -- d4d5e4e6
 e6_m -- c4_ot -- "Nf6\nt NeoI"
 c4_ot -- "f5\nt Dut"
 c4_ot -- "d5\nt QGD" -- c4d5d4e6
+c4b6d4e6[shape=rectangle, label="Engl D\nc4b6d4e6"]
+c4_ot -- "b6\nengD" -- c4b6d4e6
 e6_m -- c3_ot
 d4 -- g6_m -- c4_dg -- "Bg7\nQpMod"
 
@@ -182,7 +187,7 @@ d4 -- c5_ob -- "d5\nOld Benoni"
 
 /////////////// CHAPTER SEVEN ///////////////
 
-reti[label="Nf3\nBarcza/Reti/\nZuker.", style=filled, color=black, fontcolor=white]
+reti[label="Nf3\nBarcza/Reti/\nZuker.", style=filled, color=red, fontcolor=white]
 reti -- Nf6_b -- g3_b2 -- "d5\nKIA 2"
 g3_b2 -- "g6\nKIA"
 Nf6_b -- "c4\nt Eng"
@@ -214,7 +219,7 @@ c4_mq -- e00qpg
 
 //// English ////
 
-eng[label="c4\nEnglish", style=filled, color=black, fontcolor=white]
+eng[label="c4\nEnglish", style=filled, color=red, fontcolor=white]
 c5_e[label="c5\nSymm"]
 eng -- Nf6_e -- Nc3_ea -- g6_eg
 Nf6_e -- Nf3_el -- g6_em
@@ -227,6 +232,13 @@ c5_e -- Nc3_er -- Nc6_es
 eng -- g6_e -- Nc3_ef -- Bg7_ek
 g6_e -- d4_et -- Bg7_eu
 
+e6_e -- d4_many
+d4_many -- d5_eqgd -- c4d5d4e6
+d4_many -- b6_engd -- c4b6d4e6
 
+eng -- c6_e -- d4_esv -- d5_esv -- c4c6d4d5
+d4_esv -- Nf6_et -- c4c6d4nf6
+c4c6d4nf6[shape=rectangle, label="Slav-Ind\nc4c6d4nf6"]
+c4c6d4d5[shape=rectangle, label="Slav\nc4c6d4d5"]
 
 }
