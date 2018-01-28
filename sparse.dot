@@ -9,7 +9,7 @@ e5 -- Nf3 [penwidth=17]
 
 e5 -- "Bc4\nBishop's"
 "Bc4\nBishop's" -- "Nf6\nBerlin"
-"Bc4\nBishop's" -- "Nc6\nbe Ital"
+"Bc4\nBishop's" -- "Nc6\ntItal"
 "Bc4\nBishop's" -- "Bc5\nClass D"
 
 
@@ -17,7 +17,7 @@ e5 -- "Nc3\nVienna"
 "Nc3\nVienna" -- "Nf6\nFalkb"
 "Nc3\nVienna" -- "Nc6\nMaxLan"
 
-e5 -- "c3\nCenter Pawn"
+e5 -- "c3\nCtrP"
 
 d4_pn[label=d4]
 e5 -- d4_pn
@@ -32,8 +32,7 @@ e5 -- "f4\nKing's Gambit" -- "exf4\nKGA"
 Nf3 -- Nc6 [penwidth=17] // main line p. 40
 Nf3 -- "Nf6\nPetr"
 Nf3 -- "d6\nPhild"
-Nf3 -- "f5\nLatv"
-Nf3 -- "d5\nEleph"
+Nf3 -- "d5\nElef"
 
 // Ruy and siblings //
 
@@ -54,19 +53,14 @@ Nf6_z[label="Nf6\nQpG"]
 d5_qp -- Nf3_z [penwidth=5]
 Nf3_z -- Nf6_z
 Nf3_z -- "c6\nQgdSl"
-Nf3_z -- "e6\nqpg"
-Nf3_z -- "c5\nqpg"
 
 
 // qg
 qg[label="c4\nQG"]
 d5_qp -- qg [penwidth=13]
 qg -- "dxc4\nQGA"
-qg -- "Bf5\nGrauV"
 qg -- "e6\nQGD"
 qg -- "c6\nSlvD" [penwidth=9]
-qg -- "Nc6\nChgD"
-qg -- "Nf6\nMshD"
 
 
 /////////////// MODERN KING PAWN ///////////////
@@ -76,21 +70,13 @@ e4 -- "e6\nFrench Def" [penwidth=2.6]
 "e6\nFrench Def" -- d3_kia -- "d5\nKIA"
 
 e4 -- "c6\nCaro-Kann" -- d4_ck -- d5_ck
-d4_ck -- "g6\nMod D"
 "c6\nCaro-Kann" -- c4_ck -- "d5\nAnti CK"
-"c6\nCaro-Kann" -- Nf3_ck -- "d5\Fisch-ish"
 
 e4 -- "d5!?\nScand. D" -- exd5_sd -- Qxd5
 exd5_sd -- Nf6_sd
-"d5!?\nScand. D" -- d4_sd
-d4_sd -- "dxe4\nBlackm"
-d4_sd -- "c6\nCaro"
-d4_sd -- "e6\nFrench"
-d4_sd -- "Nc6\nNimz D"
+"d5!?\nScand. D" -- "d4\ntransp"
 
-e4 -- "g6\nModern" -- d4_md -- "Bg7\nmd"
-d4_md -- "c6\nCaro 2"
-d4_md -- "d6\nPirc"
+e4 -- "g6\nModern" -- d4_md
 
 // sicilian //
 
@@ -106,14 +92,12 @@ Nf3_os -- Nc6_os [penwidth=6]
 "c5\nSicilian Def" -- "Nc3\nclosed"
 "Nc3\nclosed" -- Nc6_cl
 "Nc3\nclosed" -- d6_cl
-"Nc3\nclosed" -- e6_cl
 
 "c5\nSicilian Def" -- d4_sm -- cxd4_sm
 d4_sm -- e6_sm
 
 "c5\nSicilian Def" -- "c3\nAlapinV" -- d5_av
 "c3\nAlapinV" -- Nf6_av
-"c3\nAlapinV" -- e6_av
 
 // end sici
 
@@ -137,12 +121,11 @@ dutch[label="f5\nDutch Def"]
 d4 -- dutch
 dutch -- g3_dd -- Nf6_dg
 dutch -- Nf3_dd -- Nf6_dn
-Nf3_dd -- "e6\nQpawn"
+Nf3_dd -- "e6\nqp"
 dutch -- Nc3_dd
 dutch -- "c4\nmain" -- Nf6_dd
 "c4\nmain" -- "g6\nLeningr"
 dutch -- "e4\nStauGb" -- fxe4_sg
-dutch -- Bg5_dd -- h6_dd
 
 // indian //
 
@@ -152,16 +135,13 @@ Nf6_mq -- c4_mq
 // bulk of the indian
 g6_mq[label="g6\nNeoI"]
 c5_mq[label="c5\nHrom D\nBeno.D"]
-c4_mq -- e6_i
 c4_mq -- g6_mq [penwidth=7]
 c4_mq -- c5_mq[penwidth=2]
-c4_mq -- d6_i
-c4_mq -- c6_i
 c4_mq -- "e5\nBudG"
 
 // non indian //
 
-d4 -- e6_m -- e4_ot -- "d5\nt Fre"
+d4 -- e6_m -- e4_ot -- "d5\ntFre"
 e6_m -- c4_ot -- "Nf6\nt NeoI"
 c4_ot -- "f5\nt Dut"
 c4_ot -- "d4\nt QGD"
@@ -203,10 +183,7 @@ c5_hh -- "c4\ntSEng"
 
 //// others ////
 
-d5_qp -- e4_qp -- "dxe4\ntBlkm"
-e4_qp -- "e6\nt Fren"
-e4_qp -- "c6\ntC-K"
-e4_qp -- "Nc6\ntNimz"
+d5_qp -- "e4\nt Many"
 
 c4_mq -- "d6\nOID"
 
