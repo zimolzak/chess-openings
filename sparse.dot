@@ -1,0 +1,231 @@
+graph {
+
+////////////////////////// CLASSICAL KING PAWN ///////////////
+
+Start -- e4 [weight=4 penwidth=10]
+e5[label="e5\nOpen"]
+e4 -- e5 [penwidth=5]
+e5 -- Nf3 [penwidth=17]
+
+e5 -- "Bc4\nBishop's"
+"Bc4\nBishop's" -- "Nf6\nBerlin"
+"Bc4\nBishop's" -- "Nc6\nbe Ital"
+"Bc4\nBishop's" -- "Bc5\nClass D"
+
+
+e5 -- "Nc3\nVienna"
+"Nc3\nVienna" -- "Nf6\nFalkb"
+"Nc3\nVienna" -- "Nc6\nMaxLan"
+
+e5 -- "c3\nCenter Pawn"
+
+d4_pn[label=d4]
+e5 -- d4_pn
+
+d4_pn -- "Nc6\nNimzo"
+d4_pn -- "exd4!\nCtr G"
+
+e5 -- "f4\nKing's Gambit" -- "exf4\nKGA"
+"f4\nKing's Gambit" -- "Bc5\nKGcD"
+"f4\nKing's Gambit" -- "d5\nFalkb"
+
+Nf3 -- Nc6 [penwidth=17] // main line p. 40
+Nf3 -- "Nf6\nPetr"
+Nf3 -- "d6\nPhild"
+Nf3 -- "f5\nLatv"
+Nf3 -- "d5\nEleph"
+
+// Ruy and siblings //
+
+Nc6 -- "Bb5\nRuy" [penwidth=8]
+Nc6 -- "Bc4\nItalian" [penwidth=6]
+Nc6 -- "d4\nScotch" [penwidth=3]
+Nc6 -- "Nc3\n3 Knight"
+
+////////////////////////// CLASSICAL QUEEN PAWN ///////////////
+
+Start -- d4 [penwidth=6]
+d5_qp[label="d5\nClosed"]
+d4 -- d5_qp [penwidth=7 weight=2]
+
+// zukertort doesn't belong here but render diff.
+Nf3_z[label="Nf3\nZukV"]
+Nf6_z[label="Nf6\nQpG"]
+d5_qp -- Nf3_z [penwidth=5]
+Nf3_z -- Nf6_z
+Nf3_z -- "c6\nQgdSl"
+Nf3_z -- "e6\nqpg"
+Nf3_z -- "c5\nqpg"
+
+
+// qg
+qg[label="c4\nQG"]
+d5_qp -- qg [penwidth=13]
+qg -- "dxc4\nQGA"
+qg -- "Bf5\nGrauV"
+qg -- "e6\nQGD"
+qg -- "c6\nSlvD" [penwidth=9]
+qg -- "Nc6\nChgD"
+qg -- "Nf6\nMshD"
+
+
+/////////////// MODERN KING PAWN ///////////////
+
+e4 -- "e6\nFrench Def" [penwidth=2.6]
+"e6\nFrench Def" -- d4_fd -- d5_fd
+"e6\nFrench Def" -- d3_kia -- "d5\nKIA"
+
+e4 -- "c6\nCaro-Kann" -- d4_ck -- d5_ck
+d4_ck -- "g6\nMod D"
+"c6\nCaro-Kann" -- c4_ck -- "d5\nAnti CK"
+"c6\nCaro-Kann" -- Nf3_ck -- "d5\Fisch-ish"
+
+e4 -- "d5!?\nScand. D" -- exd5_sd -- Qxd5
+exd5_sd -- Nf6_sd
+"d5!?\nScand. D" -- d4_sd
+d4_sd -- "dxe4\nBlackm"
+d4_sd -- "c6\nCaro"
+d4_sd -- "e6\nFrench"
+d4_sd -- "Nc6\nNimz D"
+
+e4 -- "g6\nModern" -- d4_md -- "Bg7\nmd"
+d4_md -- "c6\nCaro 2"
+d4_md -- "d6\nPirc"
+
+// sicilian //
+
+e4 -- "c5\nSicilian Def" [penwidth=8]
+
+"c5\nSicilian Def" -- Nf3_os [penwidth=14]
+Nf3_os -- "d6\nSchev\nModV" [penwidth=8]
+e6_os[label="e6\nFrenV"]
+Nf3_os -- e6_os [penwidth=4]
+Nc6_os[label="Nc6\nOld Sic"]
+Nf3_os -- Nc6_os [penwidth=6]
+
+"c5\nSicilian Def" -- "Nc3\nclosed"
+"Nc3\nclosed" -- Nc6_cl
+"Nc3\nclosed" -- d6_cl
+"Nc3\nclosed" -- e6_cl
+
+"c5\nSicilian Def" -- d4_sm -- cxd4_sm
+d4_sm -- e6_sm
+
+"c5\nSicilian Def" -- "c3\nAlapinV" -- d5_av
+"c3\nAlapinV" -- Nf6_av
+"c3\nAlapinV" -- e6_av
+
+// end sici
+
+e4 -- "Nf6\nAlekhine Def" -- e5_al -- Nd5_al
+"Nf6\nAlekhine Def" -- Nc3_al -- d5_al
+Nc3_al -- d5_Vien
+
+e4 -- "Nc6\nNimzowitsch" -- d4_nz -- d5_nz
+"Nc6\nNimzowitsch" -- Nf3_nz -- e5_Open
+
+e4 -- "d6\nPirc Def" -- d4_pd -- Nf6_pd
+
+
+/////////////// MODERN QUEEN PAWN ///////////////
+
+d4 -- "b5\nPolish Def" -- e4_pd -- Bb7_pd
+
+// dutch
+
+dutch[label="f5\nDutch Def"]
+d4 -- dutch
+dutch -- g3_dd -- Nf6_dg
+dutch -- Nf3_dd -- Nf6_dn
+Nf3_dd -- "e6\nQpawn"
+dutch -- Nc3_dd
+dutch -- "c4\nmain" -- Nf6_dd
+"c4\nmain" -- "g6\nLeningr"
+dutch -- "e4\nStauGb" -- fxe4_sg
+dutch -- Bg5_dd -- h6_dd
+
+// indian //
+
+Nf6_mq[label="Nf6\nIndian"]
+d4 -- Nf6_mq [penwidth=10]
+Nf6_mq -- c4_mq
+// bulk of the indian
+g6_mq[label="g6\nNeoI"]
+c5_mq[label="c5\nHrom D\nBeno.D"]
+c4_mq -- e6_i
+c4_mq -- g6_mq [penwidth=7]
+c4_mq -- c5_mq[penwidth=2]
+c4_mq -- d6_i
+c4_mq -- c6_i
+c4_mq -- "e5\nBudG"
+
+// non indian //
+
+d4 -- e6_m -- e4_ot -- "d5\nt Fre"
+e6_m -- c4_ot -- "Nf6\nt NeoI"
+c4_ot -- "f5\nt Dut"
+c4_ot -- "d4\nt QGD"
+e6_m -- c3_ot
+d4 -- g6_m -- c4_dg -- "Bg7\nQpMod"
+c4_dg -- "Nf6\nKID"
+g6_m -- e4_m -- "Bg7\nModD"
+e4_m -- "c6\ntC-K 2"
+e4_m -- "d6\nModD"
+g6_m -- Nf3_dg -- Bg7_dg
+
+// super weird d4 responses
+
+d4 -- b6_sw -- c4_sw -- "e6\nEnglishD"
+d4 -- c5_ob -- "d5\nOld Benoni" -- e5_ob
+"d5\nOld Benoni" -- Nf6_ob
+"d5\nOld Benoni" -- d6_ob
+
+/////////////// CHAPTER SEVEN ///////////////
+
+reti[label="Nf3\nBarcza/Reti/\nZuker."]
+Start -- reti 
+reti -- Nf6_b -- g3_b2 -- "d5\nKIA 2"
+g3_b2 -- "g6\nKIA"
+Nf6_b -- "c4\nt Eng"
+Nf6_b -- "d4\nIndD"
+
+reti -- d5_b
+d5_b -- c4_b -- "e6\nt Engl"
+c4_b -- "c6\ntMany"
+c4_b -- "d4\nRetAdv"
+d5_b -- "g3\nKIA" -- "Nf6\nLond"
+"g3\nKIA" -- c5_kr
+d5_b -- "d4\nQG"
+
+reti -- c5_hh -- g3_hh -- "b6\nHedge"
+c5_hh -- "e4\ntSic"
+c5_hh -- "c4\ntSEng"
+
+//// others ////
+
+d5_qp -- e4_qp -- "dxe4\ntBlkm"
+e4_qp -- "e6\nt Fren"
+e4_qp -- "c6\ntC-K"
+e4_qp -- "Nc6\ntNimz"
+
+c4_mq -- "d6\nOID"
+
+//// English ////
+
+eng[label="c4\nEnglish"]
+c5_e[label="c5\nSymm"]
+Start -- eng
+eng -- Nf6_e -- Nc3_ea -- g6_eg
+Nf6_e -- Nf3_el -- g6_em
+eng -- e5_e -- Nc3_eb -- Nf6_eh
+e5_e -- g3_en -- Nf6_eo
+eng -- e6_e -- Nc3_ec -- d5_ei
+e6_e -- Nf3_ep -- d5_eq
+eng -- c5_e -- Nf3_ed -- Nf6_ej
+c5_e -- Nc3_er -- Nc6_es
+eng -- g6_e -- Nc3_ef -- Bg7_ek
+g6_e -- d4_et -- Bg7_eu
+
+
+
+}
