@@ -177,6 +177,13 @@ e4_m -- "c6\ntC-K 2"
 e4_m -- "d6\nModD"
 g6_m -- Nf3_dg -- Bg7_dg
 
+// super weird d4 responses
+
+d4 -- b6_sw -- c4_sw -- "e6\nEnglishD"
+d4 -- c5_ob -- "d5\nOld Benoni" -- e5_ob
+"d5\nOld Benoni" -- Nf6_ob
+"d5\nOld Benoni" -- d6_ob
+
 /////////////// CHAPTER SEVEN ///////////////
 
 Start -- "Nf3\nBarcza/Reti" -- d5_b -- g3_b -- "Nf6\nLond"
@@ -193,7 +200,6 @@ e4_qp -- "e6\nt Fren"
 e4_qp -- "c6\ntC-K"
 e4_qp -- "Nc6\ntNimz"
 
-d4 -- c5_ob -- "d5\nOld Benoni"
 
 c4_mq -- "d6\nOID"
 
