@@ -8,14 +8,15 @@ e4 -- e5 [penwidth=5]
 e5 -- Nf3 [penwidth=17]
 
 e5 -- "Bc4\nBishop's"
-"Bc4\nBishop's" -- "Nf6\nBerlin"
+"Bc4\nBishop's" -- berlin
+berlin[label="Nf6\nBerlin", image="germany.png"]
 "Bc4\nBishop's" -- "Nc6\ntItal"
 "Bc4\nBishop's" -- "Bc5\nClass D"
 
-
-e5 -- "Nc3\nVienna"
-"Nc3\nVienna" -- "Nf6\nFalkb"
-"Nc3\nVienna" -- "Nc6\nMaxLan"
+vien[label="Nc3\nVienna", image="austria.png"]
+e5 -- vien
+vien -- "Nf6\nFalkb"
+vien -- "Nc6\nMaxLan"
 
 e5 -- "f4\nKing's Gambit" -- "exf4\nKGA"
 "f4\nKing's Gambit" -- "Bc5\nKGD"
@@ -28,11 +29,14 @@ Nf3 -- "d5\nElef"
 
 // Ruy and siblings //
 
-ruy[label="Bb5\nRuy", style=filled, color=black, fontcolor=white]
+ruy[label="Bb5\nRuy", style=filled, color=black, fontcolor=white, image="spain.png"]
 
 Nc6 -- ruy [penwidth=8]
-Nc6 -- "Bc4\nItalian" [penwidth=6]
-Nc6 -- "d4\nScotch" [penwidth=3]
+
+ital[label="Bc4\nItalian", image="italy.png"]
+Nc6 -- ital [penwidth=6]
+scot[label="d4\nScotch", image="scotland.png"]
+Nc6 -- scot [penwidth=3]
 Nc6 -- "Nc3\n3 Knight"
 
 ////////////////////////// CLASSICAL QUEEN PAWN ///////////////
@@ -60,35 +64,40 @@ qg -- "c6\nSlvD" [penwidth=9]
 
 d5_fd[style=filled, color=black, fontcolor=white]
 
-e4 -- "e6\nFrench Def" [penwidth=2.6]
+french[label="e6\nFrench Def", image="france.png"]
+e4 -- french [penwidth=2.6]
 d4d5e4e6[shape=rectangle, label="French\nd4d5e4e6"]
-"e6\nFrench Def" -- d4_fd -- d5_fd -- d4d5e4e6
-"e6\nFrench Def" -- d3_kia -- "d5\nKIA"
+french -- d4_fd -- d5_fd -- d4d5e4e6
+french -- d3_kia -- "d5\nKIA"
 
 carokann[label="c6\nCaro-Kann", style=filled, color=black, fontcolor=white]
 
 e4 -- carokann -- d4_ck -- d5_ck
 carokann -- c4_ck -- "d5\nAnti CK"
 
-e4 -- "d5!?\nScand. D" -- exd5_sd -- Qxd5
+scand[label="d5!?\nScand. D", image="sweden.png"]
+
+e4 -- scand -- exd5_sd -- Qxd5
 exd5_sd -- Nf6_sd
-"d5!?\nScand. D" -- "d4\ntransp" -- e6_sf -- d4d5e4e6
+scand -- "d4\ntransp" -- e6_sf -- d4d5e4e6
 
 // sicilian //
 
-e4 -- "c5\nSicilian Def" [penwidth=8]
+sic[label="c5\nSicilian Def", image="sicily.png"]
+
+e4 -- sic [penwidth=8]
 
 schev[label="d6\nSchev\nModV", style=filled, color=black, fontcolor=white]
 oldsic[label="Nc6\nOld Sic", style=filled, color=black, fontcolor=white]
 frenv[label="e6\nFrenV", style=filled, color=black, fontcolor=white]
 
-"c5\nSicilian Def" -- Nf3_os [penwidth=14]
+sic -- Nf3_os [penwidth=14]
 Nf3_os -- schev [penwidth=8]
 Nf3_os -- frenv [penwidth=4]
 Nf3_os -- oldsic [penwidth=6]
 Nf3_os -- os
 
-"c5\nSicilian Def" -- "Nc3\nclosed"
+sic -- "Nc3\nclosed"
 "Nc3\nclosed" -- Nc6_cl
 "Nc3\nclosed" -- d6_cl
 
@@ -102,7 +111,7 @@ e4 -- "d6\nPirc Def" -- d4_pd -- Nf6_pd
 
 // dutch
 
-dutch[label="f5\nDutch Def"]
+dutch[label="f5\nDutch Def", image="holland.png"]
 d4 -- dutch
 dutch -- "c4\nmain" -- Nf6_dd
 "c4\nmain" -- "g6\nLeningr"
@@ -110,7 +119,7 @@ dutch -- "e4\nStauGb" -- fxe4_sg
 
 // indian //
 
-indian[label="Nf6\nIndian"]
+indian[label="Nf6\nIndian", image="india.png"]
 d4 -- indian [penwidth=10]
 indian -- c4_mq
 // bulk of the indian
@@ -165,7 +174,7 @@ c4_mq -- e00qpg
 
 //// English ////
 
-eng[label="c4\nEnglish", style=filled, color=red, fontcolor=white]
+eng[label="c4\nEnglish", style=filled, color=red, fontcolor=white, image="england.png"]
 c5_e[label="c5\nSymm"]
 eng -- Nf6_e
 eng -- e5_e
