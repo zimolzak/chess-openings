@@ -14,8 +14,7 @@ e5 -- "Bc4\nBishop's"
 
 
 e5 -- "Nc3\nVienna"
-nc3e5e4nf6[shape=rectangle,label="Vien-Falk\nnc3e5e4nf6"]
-"Nc3\nVienna" -- "Nf6\nFalkb" -- nc3e5e4nf6
+"Nc3\nVienna" -- "Nf6\nFalkb"
 "Nc3\nVienna" -- "Nc6\nMaxLan"
 
 e5 -- "f4\nKing's Gambit" -- "exf4\nKGA"
@@ -23,7 +22,6 @@ e5 -- "f4\nKing's Gambit" -- "exf4\nKGA"
 "f4\nKing's Gambit" -- "d5\nFalkb"
 
 Nf3 -- Nc6 [penwidth=17] // main line p. 40
-Nc6 -- e4nc6e5nf3
 Nf3 -- "Nf6\nPetr"
 Nf3 -- "d6\nPhild"
 Nf3 -- "d5\nElef"
@@ -63,6 +61,7 @@ qg -- "c6\nSlvD" [penwidth=9]
 d5_fd[style=filled, color=black, fontcolor=white]
 
 e4 -- "e6\nFrench Def" [penwidth=2.6]
+d4d5e4e6[shape=rectangle, label="French\nd4d5e4e6"]
 "e6\nFrench Def" -- d4_fd -- d5_fd -- d4d5e4e6
 "e6\nFrench Def" -- d3_kia -- "d5\nKIA"
 
@@ -93,20 +92,7 @@ Nf3_os -- os
 "Nc3\nclosed" -- Nc6_cl
 "Nc3\nclosed" -- d6_cl
 
-"c5\nSicilian Def" -- d4_sm -- cxd4_sm
-d4_sm -- e6_sm
-
-"c5\nSicilian Def" -- "c3\nAlapinV" -- d5_av
-"c3\nAlapinV" -- Nf6_av
-
 // end sici
-
-e4 -- "Nf6\nAlekhine Def" -- e5_al -- Nd5_al
-"Nf6\nAlekhine Def" -- Nc3_al -- d5_al
-Nc3_al -- e5_Vien
-d4d5e4e6[shape=rectangle, label="French\nd4d5e4e6"]
-e5_Vien -- nc3e5e4nf6
-
 
 e4 -- "d6\nPirc Def" -- d4_pd -- Nf6_pd
 
@@ -129,11 +115,10 @@ d4 -- indian [penwidth=10]
 indian -- c4_mq
 // bulk of the indian
 g6_mq[label="g6\nNeoI"]
-c5_mq[label="c5\nHrom D\nBeno.D"]
+c5_mq[label="c5\nHromD\nBenoD"]
 c4_mq -- g6_mq [penwidth=7]
 c4_mq -- c5_mq[penwidth=2]
 c4_mq -- "e5\nBudG"
-c4_mq -- c6_si
 
 nf3qpg[label="Nf3\nIndD/qpg?", style=filled, color=black, fontcolor=white]
 d4nf6nf3[shape=rectangle, label="Ind D\nd4nf6nf3"]
@@ -142,12 +127,7 @@ indian -- nf3qpg
 
 // non indian //
 
-
-d4 -- e6_m -- e4_ot -- "d5\ntFre"
-e6_m -- c4_ot -- "d5\nt QGD"
-c4_ot -- "b6\nengD"
 d4 -- g6_m -- c4_dg -- "Bg7\nQpMod"
-
 kid[label="Nf6\nKID", style=filled, color=black, fontcolor=white]
 c4_dg -- kid
 
