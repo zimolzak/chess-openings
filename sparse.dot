@@ -2,7 +2,7 @@ graph {
 
 ////////////////////////// CLASSICAL KING PAWN ///////////////
 
-e4[style=filled, color=red]
+e4[shape=rectangle]
 e5[label="e5\nOpen"]
 e4 -- e5 [penwidth=5]
 e5 -- Nf3 [penwidth=17]
@@ -41,7 +41,7 @@ Nc6 -- "Nc3\n3 Knight"
 
 ////////////////////////// CLASSICAL QUEEN PAWN ///////////////
 
-d4[style=filled, color=red]
+d4[shape=rectangle]
 d5_qp[label="d5\nClosed"]
 d4 -- d5_qp [penwidth=7 weight=2]
 
@@ -142,7 +142,7 @@ c4_dg -- kid
 
 /////////////// CHAPTER SEVEN ///////////////
 
-reti[label="Nf3\nBarcza/Reti/\nZuker.", style=filled, color=red, fontcolor=white]
+reti[label="Nf3\nBarcza/Reti/\nZuker.", shape=rectangle]
 reti -- Nf6_b -- g3_b2 -- "d5\nKIA 2"
 g3_b2 -- "g6\nKIA"
 Nf6_b -- "c4\nt Eng" -- g6_eg
@@ -174,7 +174,7 @@ c4_mq -- e00qpg
 
 //// English ////
 
-eng[label="c4\nEnglish", style=filled, color=red, fontcolor=white, image="england.png"]
+eng[label="c4\nEnglish", shape=rectangle, image="england.png"]
 c5_e[label="c5\nSymm"]
 eng -- Nf6_e
 eng -- e5_e
