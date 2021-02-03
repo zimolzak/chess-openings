@@ -12,7 +12,6 @@ e5 -- "f4\nKing's Gambit" -- "exf4\nKGA"
 "f4\nKing's Gambit" -- "Bc5\nKGD"
 
 Nf3 -- Nc6 [penwidth=17] // main line p. 40
-Nc6 -- e4nc6e5nf3
 Nf3 -- "Nf6\nPetr"
 Nf3 -- "d6\nPhild"
 Nf3 -- "d5\nElef"
@@ -79,12 +78,6 @@ Nf3_os -- oldsic [penwidth=6]
 Nf3_os -- os
 
 // end sici
-
-nc3e5e4nf6[shape=rectangle,label="Vien-Falk\nnc3e5e4nf6"]
-
-e4 -- "Nc6\nNimzowitsch" -- d4_nz -- d5_nz
-e4nc6e5nf3[shape=rectangle, label="Open\ne4nc6e5nf3"]
-"Nc6\nNimzowitsch" -- Nf3_nz -- e5_Open -- e4nc6e5nf3
 
 
 /////////////// MODERN QUEEN PAWN ///////////////
