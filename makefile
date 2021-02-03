@@ -1,4 +1,4 @@
-allpdfs = openings.pdf twomoves.pdf sparse.pdf fdp.pdf
+allpdfs = openings.pdf twomoves.pdf sparse.pdf fdp.pdf sparser.pdf
 
 all : $(allpdfs)
 

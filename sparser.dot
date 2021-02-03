@@ -8,21 +8,8 @@ e4 -- e5 [penwidth=5]
 e5 -- Nf3 [penwidth=17]
 
 
-e5 -- "Nc3\nVienna"
-"Nc3\nVienna" -- "Nf6\nFalkb" -- nc3e5e4nf6
-"Nc3\nVienna" -- "Nc6\nMaxLan"
-
-e5 -- "c3\nCtrP"
-
-d4_pn[label=d4]
-e5 -- d4_pn
-
-d4_pn -- "Nc6\nNimzo"
-d4_pn -- "exd4!\nCtr G"
-
 e5 -- "f4\nKing's Gambit" -- "exf4\nKGA"
 "f4\nKing's Gambit" -- "Bc5\nKGD"
-"f4\nKing's Gambit" -- "d5\nFalkb"
 
 Nf3 -- Nc6 [penwidth=17] // main line p. 40
 Nc6 -- e4nc6e5nf3
@@ -47,10 +34,7 @@ d4 -- d5_qp [penwidth=7 weight=2]
 
 // zukertort doesn't belong here but render diff.
 Nf3_z[label="Nf3\nZukV"]
-Nf6_z[label="Nf6\nQpG"]
 d5_qp -- Nf3_z [penwidth=5]
-Nf3_z -- Nf6_z
-Nf3_z -- "c6\nQgdSl"
 
 
 // qg
@@ -80,8 +64,6 @@ e4 -- "d5!?\nScand. D" -- exd5_sd -- Qxd5
 exd5_sd -- Nf6_sd
 "d5!?\nScand. D" -- "d4\ntransp" -- e6_sf -- d4d5e4e6
 
-e4 -- "g6\nModern" -- d4_md
-
 // sicilian //
 
 e4 -- "c5\nSicilian Def" [penwidth=8]
@@ -96,44 +78,21 @@ Nf3_os -- frenv [penwidth=4]
 Nf3_os -- oldsic [penwidth=6]
 Nf3_os -- os
 
-"c5\nSicilian Def" -- "Nc3\nclosed"
-"Nc3\nclosed" -- Nc6_cl
-"Nc3\nclosed" -- d6_cl
-
-"c5\nSicilian Def" -- d4_sm -- cxd4_sm
-d4_sm -- e6_sm
-
-"c5\nSicilian Def" -- "c3\nAlapinV" -- d5_av
-"c3\nAlapinV" -- Nf6_av
-
 // end sici
 
-e4 -- "Nf6\nAlekhine Def" -- e5_al -- Nd5_al
-"Nf6\nAlekhine Def" -- Nc3_al -- d5_al
-Nc3_al -- e5_Vien
 nc3e5e4nf6[shape=rectangle,label="Vien-Falk\nnc3e5e4nf6"]
-e5_Vien -- nc3e5e4nf6
 
 e4 -- "Nc6\nNimzowitsch" -- d4_nz -- d5_nz
 e4nc6e5nf3[shape=rectangle, label="Open\ne4nc6e5nf3"]
 "Nc6\nNimzowitsch" -- Nf3_nz -- e5_Open -- e4nc6e5nf3
 
 
-e4 -- "d6\nPirc Def" -- d4_pd -- Nf6_pd
-
-
 /////////////// MODERN QUEEN PAWN ///////////////
-
-d4 -- "b5\nPolish Def" -- e4_pd -- Bb7_pd
 
 // dutch
 
 dutch[label="f5\nDutch Def"]
 d4 -- dutch
-dutch -- g3_dd -- Nf6_dg
-dutch -- Nf3_dd -- Nf6_dn
-Nf3_dd -- "e6\nqp"
-dutch -- Nc3_dd
 dutch -- "c4\nmain" -- Nf6_dd
 "c4\nmain" -- "g6\nLeningr"
 dutch -- "e4\nStauGb" -- fxe4_sg
@@ -161,25 +120,19 @@ indian -- nf3qpg
 d4d5e4e6[shape=rectangle, label="French\nd4d5e4e6"]
 
 d4 -- e6_m -- e4_ot -- "d5\ntFre" -- d4d5e4e6
-e6_m -- c4_ot -- "Nf6\nt NeoI"
-c4_ot -- "f5\nt Dut"
+e6_m -- c4_ot -- "f5\nt Dut"
 c4_ot -- "d5\nt QGD" -- c4d5d4e6
 c4b6d4e6[shape=rectangle, label="Engl D\nc4b6d4e6"]
 c4_ot -- "b6\nengD" -- c4b6d4e6
-e6_m -- c3_ot
 d4 -- g6_m -- c4_dg -- "Bg7\nQpMod"
 
 kid[label="Nf6\nKID", style=filled, color=black, fontcolor=white]
 c4_dg -- kid
-g6_m -- e4_m -- "Bg7\nModD"
-e4_m -- "c6\ntC-K 2"
-e4_m -- "d6\nModD"
-g6_m -- Nf3_dg -- Bg7_dg
+g6_m -- e4_m -- "c6\ntC-K 2"
 
 // super weird d4 responses
 
 d4 -- b6_sw -- c4_sw -- "e6\nEnglishD"
-d4 -- c5_ob -- "d5\nOld Benoni"
 
 /////////////// CHAPTER SEVEN ///////////////
 
@@ -208,8 +161,6 @@ c5_hh -- "c4\ntSEng" -- Nf6_ej
 
 d5_qp -- "e4\nt Many" -- e6_tf -- d4d5e4e6
 
-c4_mq -- "d6\nOID"
-
 e00qpg[label="e6\nqpg?", style=filled, color=black, fontcolor=white]
 c4_mq -- e00qpg
 
@@ -220,14 +171,10 @@ eng[label="c4\nEnglish", style=filled, color=red, fontcolor=white]
 c5_e[label="c5\nSymm"]
 eng -- Nf6_e -- Nc3_ea -- g6_eg
 Nf6_e -- Nf3_el -- g6_em
-eng -- e5_e -- Nc3_eb -- Nf6_eh
-e5_e -- g3_en -- Nf6_eo
-eng -- e6_e -- Nc3_ec -- d5_ei
-e6_e -- Nf3_ep -- d5_eq
+eng -- e5_e
+eng -- e6_e
 eng -- c5_e -- Nf3_ed -- Nf6_ej
 c5_e -- Nc3_er -- Nc6_es
-eng -- g6_e -- Nc3_ef -- Bg7_ek
-g6_e -- d4_et -- Bg7_eu
 
 e6_e -- d4_many
 d4_many -- d5_eqgd -- c4d5d4e6
