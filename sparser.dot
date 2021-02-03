@@ -1,0 +1,241 @@
+graph {
+
+////////////////////////// CLASSICAL KING PAWN ///////////////
+
+e4[style=filled, color=red]
+e5[label="e5\nOpen"]
+e4 -- e5 [penwidth=5]
+e5 -- Nf3 [penwidth=17]
+
+
+e5 -- "Nc3\nVienna"
+"Nc3\nVienna" -- "Nf6\nFalkb" -- nc3e5e4nf6
+"Nc3\nVienna" -- "Nc6\nMaxLan"
+
+e5 -- "c3\nCtrP"
+
+d4_pn[label=d4]
+e5 -- d4_pn
+
+d4_pn -- "Nc6\nNimzo"
+d4_pn -- "exd4!\nCtr G"
+
+e5 -- "f4\nKing's Gambit" -- "exf4\nKGA"
+"f4\nKing's Gambit" -- "Bc5\nKGD"
+"f4\nKing's Gambit" -- "d5\nFalkb"
+
+Nf3 -- Nc6 [penwidth=17] // main line p. 40
+Nc6 -- e4nc6e5nf3
+Nf3 -- "Nf6\nPetr"
+Nf3 -- "d6\nPhild"
+Nf3 -- "d5\nElef"
+
+// Ruy and siblings //
+
+ruy[label="Bb5\nRuy", style=filled, color=black, fontcolor=white]
+
+Nc6 -- ruy [penwidth=8]
+Nc6 -- "Bc4\nItalian" [penwidth=6]
+Nc6 -- "d4\nScotch" [penwidth=3]
+Nc6 -- "Nc3\n3 Knight"
+
+////////////////////////// CLASSICAL QUEEN PAWN ///////////////
+
+d4[style=filled, color=red]
+d5_qp[label="d5\nClosed"]
+d4 -- d5_qp [penwidth=7 weight=2]
+
+// zukertort doesn't belong here but render diff.
+Nf3_z[label="Nf3\nZukV"]
+Nf6_z[label="Nf6\nQpG"]
+d5_qp -- Nf3_z [penwidth=5]
+Nf3_z -- Nf6_z
+Nf3_z -- "c6\nQgdSl"
+
+
+// qg
+c4d5d4e6[shape=rectangle, label="QGD\nc4d5d4e6"]
+qg[label="c4\nQG", style=filled, color=black, fontcolor=white]
+d5_qp -- qg [penwidth=13]
+qg -- "dxc4\nQGA"
+qg -- "e6\nQGD" -- c4d5d4e6
+qg -- "c6\nSlvD" [penwidth=9]
+"c6\nSlvD" -- c4c6d4d5
+
+
+/////////////// MODERN KING PAWN ///////////////
+
+d5_fd[style=filled, color=black, fontcolor=white]
+
+e4 -- "e6\nFrench Def" [penwidth=2.6]
+"e6\nFrench Def" -- d4_fd -- d5_fd -- d4d5e4e6
+"e6\nFrench Def" -- d3_kia -- "d5\nKIA"
+
+carokann[label="c6\nCaro-Kann", style=filled, color=black, fontcolor=white]
+
+e4 -- carokann -- d4_ck -- d5_ck
+carokann -- c4_ck -- "d5\nAnti CK"
+
+e4 -- "d5!?\nScand. D" -- exd5_sd -- Qxd5
+exd5_sd -- Nf6_sd
+"d5!?\nScand. D" -- "d4\ntransp" -- e6_sf -- d4d5e4e6
+
+e4 -- "g6\nModern" -- d4_md
+
+// sicilian //
+
+e4 -- "c5\nSicilian Def" [penwidth=8]
+
+schev[label="d6\nSchev\nModV", style=filled, color=black, fontcolor=white]
+oldsic[label="Nc6\nOld Sic", style=filled, color=black, fontcolor=white]
+frenv[label="e6\nFrenV", style=filled, color=black, fontcolor=white]
+
+"c5\nSicilian Def" -- Nf3_os [penwidth=14]
+Nf3_os -- schev [penwidth=8]
+Nf3_os -- frenv [penwidth=4]
+Nf3_os -- oldsic [penwidth=6]
+Nf3_os -- os
+
+"c5\nSicilian Def" -- "Nc3\nclosed"
+"Nc3\nclosed" -- Nc6_cl
+"Nc3\nclosed" -- d6_cl
+
+"c5\nSicilian Def" -- d4_sm -- cxd4_sm
+d4_sm -- e6_sm
+
+"c5\nSicilian Def" -- "c3\nAlapinV" -- d5_av
+"c3\nAlapinV" -- Nf6_av
+
+// end sici
+
+e4 -- "Nf6\nAlekhine Def" -- e5_al -- Nd5_al
+"Nf6\nAlekhine Def" -- Nc3_al -- d5_al
+Nc3_al -- e5_Vien
+nc3e5e4nf6[shape=rectangle,label="Vien-Falk\nnc3e5e4nf6"]
+e5_Vien -- nc3e5e4nf6
+
+e4 -- "Nc6\nNimzowitsch" -- d4_nz -- d5_nz
+e4nc6e5nf3[shape=rectangle, label="Open\ne4nc6e5nf3"]
+"Nc6\nNimzowitsch" -- Nf3_nz -- e5_Open -- e4nc6e5nf3
+
+
+e4 -- "d6\nPirc Def" -- d4_pd -- Nf6_pd
+
+
+/////////////// MODERN QUEEN PAWN ///////////////
+
+d4 -- "b5\nPolish Def" -- e4_pd -- Bb7_pd
+
+// dutch
+
+dutch[label="f5\nDutch Def"]
+d4 -- dutch
+dutch -- g3_dd -- Nf6_dg
+dutch -- Nf3_dd -- Nf6_dn
+Nf3_dd -- "e6\nqp"
+dutch -- Nc3_dd
+dutch -- "c4\nmain" -- Nf6_dd
+"c4\nmain" -- "g6\nLeningr"
+dutch -- "e4\nStauGb" -- fxe4_sg
+
+// indian //
+
+indian[label="Nf6\nIndian"]
+d4 -- indian [penwidth=10]
+indian -- c4_mq
+// bulk of the indian
+g6_mq[label="g6\nNeoI"]
+c5_mq[label="c5\nHrom D\nBeno.D"]
+c4_mq -- g6_mq [penwidth=7]
+c4_mq -- c5_mq[penwidth=2]
+c4_mq -- "e5\nBudG"
+c4_mq -- c6_si -- c4c6d4nf6
+
+nf3qpg[label="Nf3\nIndD/qpg?", style=filled, color=black, fontcolor=white]
+d4nf6nf3[shape=rectangle, label="Ind D\nd4nf6nf3"]
+nf3qpg -- d4nf6nf3
+indian -- nf3qpg
+
+// non indian //
+
+d4d5e4e6[shape=rectangle, label="French\nd4d5e4e6"]
+
+d4 -- e6_m -- e4_ot -- "d5\ntFre" -- d4d5e4e6
+e6_m -- c4_ot -- "Nf6\nt NeoI"
+c4_ot -- "f5\nt Dut"
+c4_ot -- "d5\nt QGD" -- c4d5d4e6
+c4b6d4e6[shape=rectangle, label="Engl D\nc4b6d4e6"]
+c4_ot -- "b6\nengD" -- c4b6d4e6
+e6_m -- c3_ot
+d4 -- g6_m -- c4_dg -- "Bg7\nQpMod"
+
+kid[label="Nf6\nKID", style=filled, color=black, fontcolor=white]
+c4_dg -- kid
+g6_m -- e4_m -- "Bg7\nModD"
+e4_m -- "c6\ntC-K 2"
+e4_m -- "d6\nModD"
+g6_m -- Nf3_dg -- Bg7_dg
+
+// super weird d4 responses
+
+d4 -- b6_sw -- c4_sw -- "e6\nEnglishD"
+d4 -- c5_ob -- "d5\nOld Benoni"
+
+/////////////// CHAPTER SEVEN ///////////////
+
+reti[label="Nf3\nBarcza/Reti/\nZuker.", style=filled, color=red, fontcolor=white]
+reti -- Nf6_b -- g3_b2 -- "d5\nKIA 2"
+g3_b2 -- "g6\nKIA"
+Nf6_b -- "c4\nt Eng" -- g6_eg
+
+d4indd[label="d4\nIndD/qpg", style=filled, color=black, fontcolor=white]
+Nf6_b -- d4indd -- d4nf6nf3
+
+reti -- d5_b
+d5_b -- c4_b -- "e6\nt Engl"
+c4_b -- "c6\ntMany"
+c4_b -- "d4\nRetAdv"
+d5_b -- "g3\nKIA" -- "Nf6\nLond"
+"g3\nKIA" -- c5_kr
+d5_b -- "d4\nQG"
+
+reti -- c5_hh -- g3_hh -- "b6\nHedge"
+c5_hh -- "e4\ntSic" -- os
+os[shape=rectangle]
+c5_hh -- "c4\ntSEng" -- Nf6_ej
+
+//// others ////
+
+d5_qp -- "e4\nt Many" -- e6_tf -- d4d5e4e6
+
+c4_mq -- "d6\nOID"
+
+e00qpg[label="e6\nqpg?", style=filled, color=black, fontcolor=white]
+c4_mq -- e00qpg
+
+
+//// English ////
+
+eng[label="c4\nEnglish", style=filled, color=red, fontcolor=white]
+c5_e[label="c5\nSymm"]
+eng -- Nf6_e -- Nc3_ea -- g6_eg
+Nf6_e -- Nf3_el -- g6_em
+eng -- e5_e -- Nc3_eb -- Nf6_eh
+e5_e -- g3_en -- Nf6_eo
+eng -- e6_e -- Nc3_ec -- d5_ei
+e6_e -- Nf3_ep -- d5_eq
+eng -- c5_e -- Nf3_ed -- Nf6_ej
+c5_e -- Nc3_er -- Nc6_es
+eng -- g6_e -- Nc3_ef -- Bg7_ek
+g6_e -- d4_et -- Bg7_eu
+
+e6_e -- d4_many
+d4_many -- d5_eqgd -- c4d5d4e6
+d4_many -- b6_engd -- c4b6d4e6
+
+eng -- c6_e -- d4_esv -- d5_esv -- c4c6d4d5
+d4_esv -- Nf6_et -- c4c6d4nf6
+c4c6d4nf6[shape=rectangle, label="Slav-Ind\nc4c6d4nf6"]
+c4c6d4d5[shape=rectangle, label="Slav\nc4c6d4d5"]
+
+}
